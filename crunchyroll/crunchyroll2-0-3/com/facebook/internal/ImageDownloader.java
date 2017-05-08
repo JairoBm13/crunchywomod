@@ -7,12 +7,12 @@ package com.facebook.internal;
 import android.os.Looper;
 import java.net.URISyntaxException;
 import java.io.IOException;
+import com.facebook.FacebookException;
+import android.graphics.BitmapFactory;
+import com.facebook.android.R;
 import java.net.URI;
 import java.net.URLConnection;
 import java.io.Closeable;
-import com.facebook.android.R;
-import com.facebook.FacebookException;
-import android.graphics.BitmapFactory;
 import android.graphics.Bitmap;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -62,33 +62,50 @@ public class ImageDownloader
     }
     
     private static void download(final RequestKey requestKey, Context context) {
+        URLConnection urlConnection;
+        URLConnection urlConnection2;
+        URLConnection urlConnection3;
+        InputStream inputStream;
+        Closeable closeable;
+        Closeable closeable2;
+        Closeable closeable3;
+        char[] array;
+        Bitmap bitmap;
+        Bitmap bitmap2;
+        int n;
+        int n2;
+        int n4;
+        int n3;
+        Closeable closeable4;
+        int n5;
+        Closeable closeable5;
+        Object o;
+        HttpURLConnection httpURLConnection;
+        Object errorStream = null;
+        Object o2 = null;
+        int read;
+        Object decodeStream = null;
+        String headerField;
+        URI uri;
+        Block_3_Outer:Label_0184_Outer:
         while (true) {
-            URLConnection urlConnection = null;
-            URLConnection urlConnection2 = null;
-            URLConnection urlConnection3 = null;
-            final InputStream inputStream = null;
-            final Closeable closeable = null;
-            final Closeable closeable2 = null;
-            final Closeable closeable3 = null;
-            final char[] array = null;
-            final Bitmap bitmap = null;
-            final StringBuilder sb = null;
-            int n = 1;
-            int n2 = 1;
-            int n4;
-            int n3 = n4 = 1;
-            Closeable closeable4 = closeable3;
-            int n5 = n2;
-            Closeable closeable5 = closeable;
-            Object o = closeable2;
-            HttpURLConnection httpURLConnection;
-            Object errorStream;
-            Object decodeStream;
-            Object o2 = null;
-            int read;
-            URI uri;
-            String headerField;
-            Label_0342_Outer:Label_0449_Outer:
+            urlConnection = null;
+            urlConnection2 = null;
+            urlConnection3 = null;
+            inputStream = null;
+            closeable = null;
+            closeable2 = null;
+            closeable3 = null;
+            array = null;
+            bitmap = null;
+            bitmap2 = null;
+            n = 1;
+            n2 = 1;
+            n3 = (n4 = 1);
+            closeable4 = closeable3;
+            n5 = n2;
+            closeable5 = closeable;
+            o = closeable2;
             while (true) {
                 Label_0821_Outer:Label_0955_Outer:
                 while (true) {
@@ -122,30 +139,20 @@ public class ImageDownloader
                                 break Label_0821_Outer;
                             }
                         }
-                        urlConnection3 = httpURLConnection;
-                        n4 = n3;
-                        closeable4 = closeable3;
-                        urlConnection = httpURLConnection;
-                        n5 = n2;
-                        closeable5 = closeable;
-                        urlConnection2 = httpURLConnection;
-                        o = closeable2;
-                        errorStream = httpURLConnection.getErrorStream();
-                        urlConnection3 = httpURLConnection;
-                        n4 = n3;
-                        closeable4 = (Closeable)errorStream;
-                        urlConnection = httpURLConnection;
-                        n5 = n2;
-                        closeable5 = (Closeable)errorStream;
-                        urlConnection2 = httpURLConnection;
-                        o = errorStream;
-                        decodeStream = new StringBuilder();
-                        // iftrue(Label_1010:, errorStream == null)
                         // iftrue(Label_0921:, read <= 0)
                         while (true) {
-                            Block_3: {
-                                break Block_3;
-                                while (true) {
+                            while (true) {
+                                urlConnection3 = httpURLConnection;
+                                n4 = n3;
+                                closeable4 = (Closeable)errorStream;
+                                urlConnection = httpURLConnection;
+                                n5 = n2;
+                                closeable5 = (Closeable)errorStream;
+                                urlConnection2 = httpURLConnection;
+                                o = errorStream;
+                                read = ((InputStreamReader)context).read((char[])o2, 0, ((char[])o2).length);
+                                Block_4: {
+                                    break Block_4;
                                     urlConnection3 = httpURLConnection;
                                     n4 = n3;
                                     closeable4 = (Closeable)errorStream;
@@ -154,7 +161,7 @@ public class ImageDownloader
                                     closeable5 = (Closeable)errorStream;
                                     urlConnection2 = httpURLConnection;
                                     o = errorStream;
-                                    ((StringBuilder)decodeStream).append((char[])o2, 0, read);
+                                    context = (Context)new InputStreamReader((InputStream)errorStream);
                                     urlConnection3 = httpURLConnection;
                                     n4 = n3;
                                     closeable4 = (Closeable)errorStream;
@@ -163,19 +170,29 @@ public class ImageDownloader
                                     closeable5 = (Closeable)errorStream;
                                     urlConnection2 = httpURLConnection;
                                     o = errorStream;
-                                    read = ((InputStreamReader)context).read((char[])o2, 0, ((char[])o2).length);
-                                    continue Label_0342_Outer;
+                                    o2 = new char[128];
+                                    continue Block_3_Outer;
                                 }
+                                urlConnection3 = httpURLConnection;
+                                n4 = n3;
+                                closeable4 = (Closeable)errorStream;
+                                urlConnection = httpURLConnection;
+                                n5 = n2;
+                                closeable5 = (Closeable)errorStream;
+                                urlConnection2 = httpURLConnection;
+                                o = errorStream;
+                                ((StringBuilder)decodeStream).append((char[])o2, 0, read);
+                                continue Block_3_Outer;
                             }
                             urlConnection3 = httpURLConnection;
                             n4 = n3;
-                            closeable4 = (Closeable)errorStream;
+                            closeable4 = closeable3;
                             urlConnection = httpURLConnection;
                             n5 = n2;
-                            closeable5 = (Closeable)errorStream;
+                            closeable5 = closeable;
                             urlConnection2 = httpURLConnection;
-                            o = errorStream;
-                            context = (Context)new InputStreamReader((InputStream)errorStream);
+                            o = closeable2;
+                            errorStream = httpURLConnection.getErrorStream();
                             urlConnection3 = httpURLConnection;
                             n4 = n3;
                             closeable4 = (Closeable)errorStream;
@@ -184,53 +201,94 @@ public class ImageDownloader
                             closeable5 = (Closeable)errorStream;
                             urlConnection2 = httpURLConnection;
                             o = errorStream;
-                            o2 = new char[128];
-                            continue Label_0449_Outer;
+                            decodeStream = new StringBuilder();
+                            continue Label_0184_Outer;
                         }
                     }
+                    // iftrue(Label_1010:, errorStream == null)
                     catch (IOException o2) {
                         Utility.closeQuietly(closeable4);
                         Utility.disconnectQuietly(urlConnection3);
-                        decodeStream = sb;
+                        decodeStream = bitmap2;
                         if (n4 != 0) {
                             issueResponse(requestKey, (Exception)o2, (Bitmap)decodeStream, false);
                         }
                         return;
-                        n4 = n3;
-                        urlConnection2 = httpURLConnection;
-                        o = closeable2;
-                        context = (Context)ImageResponseCache.interceptAndCacheImageStream(context, httpURLConnection);
-                        n4 = n3;
-                        urlConnection2 = httpURLConnection;
-                        o = context;
-                        decodeStream = BitmapFactory.decodeStream((InputStream)context);
-                        o2 = array;
-                        n3 = n;
-                        errorStream = context;
+                        // iftrue(Label_0821:, context == null)
                         // iftrue(Label_0821:, context.isCancelled)
+                        // iftrue(Label_0821:, Utility.isNullOrEmpty(headerField))
                     Label_0955:
                         while (true) {
+                        Block_7_Outer:
                             while (true) {
+                                Utility.closeQuietly((Closeable)errorStream);
+                                Utility.disconnectQuietly(httpURLConnection);
+                                n4 = n3;
+                                continue Label_0821_Outer;
+                            Block_9_Outer:
                                 while (true) {
-                                    break Label_0821;
-                                    n4 = n3;
+                                    n4 = n;
                                     urlConnection2 = httpURLConnection;
-                                    o = errorStream;
-                                    o2 = new FacebookException(((StringBuilder)decodeStream).toString());
+                                    o = closeable2;
+                                    uri = new URI(headerField);
+                                    n4 = n;
+                                    urlConnection2 = httpURLConnection;
+                                    o = closeable2;
+                                    UrlRedirectCache.cacheUriRedirect(context, requestKey.uri, uri);
+                                    n4 = n;
+                                    urlConnection2 = httpURLConnection;
+                                    o = closeable2;
+                                    context = (Context)removePendingRequest(requestKey);
                                     decodeStream = bitmap;
-                                    n3 = n;
-                                    break Label_0821;
-                                    Label_1010: {
-                                        n4 = n3;
+                                    o2 = array;
+                                    n3 = n2;
+                                    errorStream = inputStream;
+                                    while (true) {
+                                        Block_8: {
+                                            break Block_8;
+                                            n4 = n;
+                                            urlConnection2 = httpURLConnection;
+                                            o = closeable2;
+                                            enqueueCacheRead(((DownloaderContext)context).request, new RequestKey(uri, requestKey.tag), false);
+                                            errorStream = inputStream;
+                                            n3 = n2;
+                                            o2 = array;
+                                            decodeStream = bitmap;
+                                            continue Block_7_Outer;
+                                            Label_1010: {
+                                                n4 = n3;
+                                            }
+                                            urlConnection2 = httpURLConnection;
+                                            o = errorStream;
+                                            ((StringBuilder)decodeStream).append(context.getString(R.string.com_facebook_image_download_unknown_error));
+                                            break Label_0955;
+                                        }
+                                        n4 = n;
+                                        decodeStream = bitmap;
+                                        o2 = array;
+                                        n3 = n2;
+                                        errorStream = inputStream;
+                                        urlConnection2 = httpURLConnection;
+                                        o = closeable2;
+                                        continue Label_0955_Outer;
                                     }
-                                    urlConnection2 = httpURLConnection;
-                                    o = errorStream;
-                                    ((StringBuilder)decodeStream).append(context.getString(R.string.com_facebook_image_download_unknown_error));
-                                    continue Label_0955;
-                                    Utility.closeQuietly((Closeable)errorStream);
-                                    Utility.disconnectQuietly(httpURLConnection);
                                     n4 = n3;
-                                    continue Label_0821_Outer;
+                                    urlConnection2 = httpURLConnection;
+                                    o = closeable2;
+                                    context = (Context)ImageResponseCache.interceptAndCacheImageStream(context, httpURLConnection);
+                                    n4 = n3;
+                                    urlConnection2 = httpURLConnection;
+                                    o = context;
+                                    decodeStream = BitmapFactory.decodeStream((InputStream)context);
+                                    o2 = array;
+                                    n3 = n;
+                                    errorStream = context;
+                                    continue Block_7_Outer;
+                                    n2 = 0;
+                                    n = (n4 = 0);
+                                    urlConnection2 = httpURLConnection;
+                                    o = closeable2;
+                                    headerField = httpURLConnection.getHeaderField("location");
                                     n4 = n;
                                     decodeStream = bitmap;
                                     o2 = array;
@@ -238,45 +296,15 @@ public class ImageDownloader
                                     errorStream = inputStream;
                                     urlConnection2 = httpURLConnection;
                                     o = closeable2;
-                                    n4 = n;
-                                    urlConnection2 = httpURLConnection;
-                                    o = closeable2;
-                                    enqueueCacheRead(((DownloaderContext)context).request, new RequestKey(uri, requestKey.tag), false);
-                                    errorStream = inputStream;
-                                    n3 = n2;
-                                    o2 = array;
-                                    decodeStream = bitmap;
-                                    continue Label_0955_Outer;
+                                    continue Block_9_Outer;
                                 }
-                                n2 = 0;
-                                n = (n4 = 0);
+                                n4 = n3;
                                 urlConnection2 = httpURLConnection;
-                                o = closeable2;
-                                headerField = httpURLConnection.getHeaderField("location");
-                                n4 = n;
+                                o = errorStream;
+                                o2 = new FacebookException(((StringBuilder)decodeStream).toString());
                                 decodeStream = bitmap;
-                                o2 = array;
-                                n3 = n2;
-                                errorStream = inputStream;
-                                urlConnection2 = httpURLConnection;
-                                o = closeable2;
-                                n4 = n;
-                                urlConnection2 = httpURLConnection;
-                                o = closeable2;
-                                uri = new URI(headerField);
-                                n4 = n;
-                                urlConnection2 = httpURLConnection;
-                                o = closeable2;
-                                UrlRedirectCache.cacheUriRedirect(context, requestKey.uri, uri);
-                                n4 = n;
-                                urlConnection2 = httpURLConnection;
-                                o = closeable2;
-                                context = (Context)removePendingRequest(requestKey);
-                                decodeStream = bitmap;
-                                o2 = array;
-                                n3 = n2;
-                                errorStream = inputStream;
-                                continue;
+                                n3 = n;
+                                continue Block_7_Outer;
                             }
                             Label_0921: {
                                 n4 = n3;
@@ -287,12 +315,10 @@ public class ImageDownloader
                             continue Label_0955;
                         }
                     }
-                    // iftrue(Label_0821:, Utility.isNullOrEmpty(headerField))
-                    // iftrue(Label_0821:, context == null)
                     catch (URISyntaxException o2) {
                         Utility.closeQuietly(closeable5);
                         Utility.disconnectQuietly(urlConnection);
-                        decodeStream = sb;
+                        decodeStream = bitmap2;
                         n4 = n5;
                         continue;
                     }

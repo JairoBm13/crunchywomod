@@ -160,6 +160,8 @@ public class aw
                                                     }
                                                 }
                                                 break Label_0242;
+                                                this.h = 0;
+                                                continue Label_0117_Outer;
                                                 this.a = aw.b.ar;
                                                 this.n = aw.a.d;
                                                 string = null;
@@ -168,8 +170,6 @@ public class aw
                                                 continue Label_0079_Outer;
                                                 this.b = "";
                                                 continue Label_0169_Outer;
-                                                this.h = 0;
-                                                continue Label_0117_Outer;
                                             }
                                             catch (Exception ex) {
                                                 ac.a(ex);

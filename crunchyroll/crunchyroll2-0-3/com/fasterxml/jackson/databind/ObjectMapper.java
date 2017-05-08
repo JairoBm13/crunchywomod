@@ -148,7 +148,7 @@ public class ObjectMapper extends ObjectCodec implements Versioned, Serializable
         //    26: aload_1        
         //    27: invokevirtual   com/fasterxml/jackson/core/JsonGenerator.flush:()V
         //    30: aconst_null    
-        //    31: astore_2       
+        //    31: astore_3       
         //    32: aload           4
         //    34: invokeinterface java/io/Closeable.close:()V
         //    39: iconst_0       
@@ -158,21 +158,25 @@ public class ObjectMapper extends ObjectCodec implements Versioned, Serializable
         //    47: invokespecial   java/lang/NullPointerException.<init>:()V
         //    50: athrow         
         //    51: return         
-        //    52: astore_1       
+        //    52: astore_2       
         //    53: aload           4
-        //    55: astore_2       
-        //    56: aload_2        
-        //    57: ifnull          66
-        //    60: aload_2        
-        //    61: invokeinterface java/io/Closeable.close:()V
-        //    66: aload_1        
-        //    67: athrow         
-        //    68: astore_1       
-        //    69: return         
-        //    70: astore_2       
-        //    71: goto            66
-        //    74: astore_1       
-        //    75: goto            56
+        //    55: astore_1       
+        //    56: aload_1        
+        //    57: astore_3       
+        //    58: aload_2        
+        //    59: astore_1       
+        //    60: aload_3        
+        //    61: ifnull          70
+        //    64: aload_3        
+        //    65: invokeinterface java/io/Closeable.close:()V
+        //    70: aload_1        
+        //    71: athrow         
+        //    72: astore_1       
+        //    73: return         
+        //    74: astore_2       
+        //    75: goto            70
+        //    78: astore_1       
+        //    79: goto            60
         //    Exceptions:
         //  throws java.io.IOException
         //  throws com.fasterxml.jackson.core.JsonGenerationException
@@ -181,10 +185,10 @@ public class ObjectMapper extends ObjectCodec implements Versioned, Serializable
         //  Try           Handler
         //  Start  End    Start  End    Type                 
         //  -----  -----  -----  -----  ---------------------
-        //  6      30     52     56     Any
-        //  32     39     74     78     Any
-        //  43     51     68     70     Ljava/io/IOException;
-        //  60     66     70     74     Ljava/io/IOException;
+        //  6      30     52     60     Any
+        //  32     39     78     82     Any
+        //  43     51     72     74     Ljava/io/IOException;
+        //  64     70     74     78     Ljava/io/IOException;
         // 
         // The error that occurred was:
         // 

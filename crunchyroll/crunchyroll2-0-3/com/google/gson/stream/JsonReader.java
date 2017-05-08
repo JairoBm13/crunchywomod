@@ -1060,11 +1060,12 @@ public class JsonReader implements Closeable
                                     final int int1 = Integer.parseInt(this.peekedString);
                                     this.peeked = 0;
                                     return int1;
+                                    c = '\"';
+                                    continue;
                                     throw new IllegalStateException("Expected an int but was " + this.peek() + " at line " + this.getLineNumber() + " column " + this.getColumnNumber());
                                     this.peekedString = null;
                                     this.peeked = 0;
                                     return;
-                                    c = '\"';
                                 }
                                 catch (NumberFormatException ex) {
                                     break;

@@ -63,6 +63,7 @@ public final class zzro
                             break Label_0409;
                         }
                         final String name2 = methods[n].getName();
+                    Label_0482_Outer:
                         while (true) {
                             if (!name2.startsWith("set")) {
                                 break Label_0349;
@@ -73,37 +74,36 @@ public final class zzro
                                     try {
                                         zza(substring, class1.getMethod("get" + substring, (Class<?>[])new Class[0]).invoke(o, new Object[0]), sb, sb2);
                                         break Label_0349;
-                                        // iftrue(Label_0511:, !o instanceof byte[])
                                         // iftrue(Label_0004:, s == null)
                                         // iftrue(Label_0490:, !o instanceof String)
-                                        Label_0482_Outer:Block_19_Outer:
+                                    Label_0482:
                                         while (true) {
-                                            s = zzfl((String)o);
-                                            sb2.append("\"").append(s).append("\"");
                                             while (true) {
-                                                while (true) {
+                                                s = zzfl((String)o);
+                                                sb2.append("\"").append(s).append("\"");
+                                                break Label_0482;
+                                                Block_17: {
+                                                    break Block_17;
                                                     sb2.append("\n");
                                                     return;
-                                                    zza((byte[])o, sb2);
-                                                    continue Block_19_Outer;
-                                                    Label_0511: {
-                                                        sb2.append(o);
-                                                    }
-                                                    continue Block_19_Outer;
                                                 }
-                                                Label_0490: {
-                                                    continue;
-                                                }
+                                                sb.setLength(length);
+                                                sb2.append(sb).append(">\n");
+                                                return;
+                                                s = zzfk(s);
+                                                sb2.append(sb).append(s).append(": ");
+                                                continue Label_0482_Outer;
                                             }
-                                            break Label_0482_Outer;
-                                            s = zzfk(s);
-                                            sb2.append(sb).append(s).append(": ");
-                                            continue Label_0482_Outer;
+                                            Label_0511: {
+                                                sb2.append(o);
+                                            }
+                                            continue Label_0482;
                                         }
-                                        sb.setLength(length);
-                                        sb2.append(sb).append(">\n");
-                                        return;
+                                        Label_0490: {
+                                            zza((byte[])o, sb2);
+                                        }
                                     }
+                                    // iftrue(Label_0511:, !o instanceof byte[])
                                     catch (NoSuchMethodException ex) {}
                                 }
                                 ++n;

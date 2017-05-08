@@ -89,11 +89,15 @@ public class MediaMetadata
         array = (String[])(Object)new HashSet((Collection<? extends E>)Arrays.asList(array));
         try {
             final Iterator keys = jsonObject.keys();
-        Block_15_Outer:
+            String s;
+            String zzbx;
+            Object value;
+            Object value2 = null;
+            Block_16_Outer:Block_15_Outer:
             while (keys.hasNext()) {
-                final String s = keys.next();
+                s = keys.next();
                 if (!"metadataType".equals(s)) {
-                    final String zzbx = MediaMetadata.zzRM.zzbx(s);
+                    zzbx = MediaMetadata.zzRM.zzbx(s);
                     Label_0245: {
                         if (zzbx == null) {
                             break Label_0245;
@@ -102,64 +106,64 @@ public class MediaMetadata
                             continue;
                         }
                         try {
-                            final Object value = jsonObject.get(s);
+                            value = jsonObject.get(s);
                             if (value == null) {
-                                continue Block_15_Outer;
+                                continue Block_16_Outer;
                             }
                             switch (MediaMetadata.zzRM.zzby(zzbx)) {
                                 case 1: {
                                     if (value instanceof String) {
                                         this.zzRN.putString(zzbx, (String)value);
-                                        continue Block_15_Outer;
+                                        continue Block_16_Outer;
                                     }
-                                    continue Block_15_Outer;
+                                    continue Block_16_Outer;
                                 }
                                 case 4: {
                                     if (value instanceof String && zzjz.zzbK((String)value) != null) {
                                         this.zzRN.putString(zzbx, (String)value);
-                                        continue Block_15_Outer;
+                                        continue Block_16_Outer;
                                     }
-                                    continue Block_15_Outer;
+                                    continue Block_16_Outer;
                                 }
                                 case 2: {
                                     if (value instanceof Integer) {
                                         this.zzRN.putInt(zzbx, (int)value);
-                                        continue Block_15_Outer;
+                                        continue Block_16_Outer;
                                     }
-                                    continue Block_15_Outer;
+                                    continue Block_16_Outer;
                                 }
                                 case 3: {
                                     if (value instanceof Double) {
                                         this.zzRN.putDouble(zzbx, (double)value);
-                                        continue Block_15_Outer;
+                                        continue Block_16_Outer;
                                     }
-                                    continue Block_15_Outer;
+                                    continue Block_16_Outer;
                                 }
                                 default: {
-                                    continue Block_15_Outer;
+                                    continue Block_16_Outer;
                                 }
                             }
                             // iftrue(Label_0306:, !value2 instanceof Integer)
                             // iftrue(Label_0018:, !value2 instanceof Double)
                             // iftrue(Label_0278:, !value2 instanceof String)
-                            Object value2 = null;
-                            Block_16:Block_17_Outer:
+                        Block_17:
                             while (true) {
-                                this.zzRN.putString(s, (String)value2);
-                                continue Block_15_Outer;
-                                Label_0278: {
-                                    break Block_16;
-                                }
                                 while (true) {
-                                    this.zzRN.putDouble(s, (double)value2);
-                                    continue Block_15_Outer;
-                                    Label_0306:
-                                    continue;
+                                    this.zzRN.putInt(s, (int)value2);
+                                    continue Block_16_Outer;
+                                    this.zzRN.putString(s, (String)value2);
+                                    continue Block_16_Outer;
+                                    Label_0278: {
+                                        continue Block_15_Outer;
+                                    }
+                                }
+                                Label_0306: {
+                                    break Block_17;
                                 }
                                 value2 = jsonObject.get(s);
-                                continue Block_17_Outer;
+                                continue;
                             }
-                            this.zzRN.putInt(s, (int)value2);
+                            this.zzRN.putDouble(s, (double)value2);
                         }
                         catch (JSONException ex) {}
                     }

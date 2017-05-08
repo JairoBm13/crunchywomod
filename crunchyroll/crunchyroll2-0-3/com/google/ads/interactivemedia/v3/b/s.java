@@ -126,38 +126,37 @@ public class s implements t.a
                             this.a(SystemClock.elapsedRealtime() - this.k, s);
                             this.b();
                             return;
-                            Label_0294: {
-                                final String string;
-                                Log.e(string, e.m);
+                            Label_0244: {
+                                Log.w("IMASDK", "Unrecognized log level: " + e.ln);
                             }
-                            return;
-                            Label_0244:
-                            Log.w("IMASDK", "Unrecognized log level: " + e.ln);
-                            final String string;
+                            String string = null;
                             Log.w(string, e.m);
                             return;
                             Label_0304:
                             Log.i(string, e.m);
                             return;
-                            Label_0152:
-                            string = "SDK_LOG:" + e.n;
-                            // switch([Lcom.strobel.decompiler.ast.Label;@4f75468a, e.ln.charAt(0))
+                            Label_0294:
+                            Log.e(string, e.m);
+                            return;
+                            Label_0314:
+                            Log.v(string, e.m);
+                            return;
                             Label_0324:
                             Log.w(string, e.m);
                             return;
-                            // iftrue(Label_0152:, e.ln != null && e.n != null && e.m != null)
-                            Label_0124: {
-                                break Label_0124;
-                                Label_0314:
-                                Log.v(string, e.m);
+                            while (true) {
+                                Log.e("IMASDK", "Invalid logging message data: " + e);
                                 return;
+                                Label_0152:
+                                string = "SDK_LOG:" + e.n;
+                                Label_0284:
+                                Log.d(string, e.m);
+                                return;
+                                continue;
                             }
-                            Log.e("IMASDK", "Invalid logging message data: " + e);
-                            return;
-                            Label_0284:
-                            Log.d(string, e.m);
-                            return;
                         }
+                        // switch([Lcom.strobel.decompiler.ast.Label;@7a5ac779, e.ln.charAt(0))
+                        // iftrue(Label_0152:, e.ln != null && e.n != null && e.m != null)
                         catch (IllegalArgumentException ex) {
                             enum1 = a;
                             continue;

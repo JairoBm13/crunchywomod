@@ -1375,19 +1375,19 @@ class MapMakerInternalMap<K, V> extends AbstractMap<K, V> implements Serializabl
                                     // iftrue(Label_0105:, n >= table.length())
                                     Block_8: {
                                         break Block_8;
+                                        Label_0105: {
+                                            this.clearReferenceQueues();
+                                        }
+                                        this.evictionQueue.clear();
+                                        this.expirationQueue.clear();
+                                        this.readCount.set(0);
+                                        ++this.modCount;
+                                        this.count = 0;
+                                        return;
                                     }
                                     table.set(n, (ReferenceEntry<K, V>)null);
                                     ++n;
                                     continue Label_0084;
-                                    Label_0105: {
-                                        this.clearReferenceQueues();
-                                    }
-                                    this.evictionQueue.clear();
-                                    this.expirationQueue.clear();
-                                    this.readCount.set(0);
-                                    ++this.modCount;
-                                    this.count = 0;
-                                    return;
                                 }
                                 finally {
                                     this.unlock();

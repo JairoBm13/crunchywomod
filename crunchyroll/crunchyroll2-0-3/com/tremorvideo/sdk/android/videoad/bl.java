@@ -4,10 +4,10 @@
 
 package com.tremorvideo.sdk.android.videoad;
 
-import java.net.URLConnection;
-import java.net.SocketTimeoutException;
 import java.io.OutputStream;
 import java.io.InputStream;
+import java.net.URLConnection;
+import java.net.SocketTimeoutException;
 import com.tremorvideo.sdk.android.logger.TestAppLogger;
 import java.io.File;
 import com.tremorvideo.sdk.android.richmedia.ae;
@@ -48,50 +48,50 @@ public class bl extends bf
         return httpURLConnection.getContentLength();
     }
     
-    private void a(File file) throws Exception {
-        Label_0365: {
-            Object o = null;
+    private void a(final File file) throws Exception {
+        Label_0358: {
             Object o2 = null;
+            String s2 = null;
             Object o4 = null;
-        Label_0334:
+        Label_0326:
             while (true) {
-                final File file2 = null;
-                o = null;
+                final String s = null;
+                Object o = null;
                 o2 = null;
-                Object o3 = o;
-            Label_0459_Outer:
+                s2 = null;
+                Object o3 = o2;
+            Label_0452_Outer:
                 while (true) {
-                    Label_1189: {
+                    Label_1190: {
                         int b = 0;
                         long n = 0L;
-                        InputStream inputStream = null;
-                        Label_0389: {
+                        Label_0382: {
                             try {
                                 b = this.b.b(this.e);
-                                o3 = o;
+                                o3 = o2;
                                 n = file.length();
                                 if (b != 0) {
-                                    break Label_1189;
+                                    break Label_1190;
                                 }
-                                o3 = o;
+                                o3 = o2;
                                 b = (int)this.a(this.b.a(this.e));
                                 if (n != b) {
-                                    break Label_0389;
+                                    break Label_0382;
                                 }
-                                o3 = o;
+                                o3 = o2;
                                 if (ac.a(this.f, file, this.b.f(this.e))) {
-                                    o3 = o;
+                                    o3 = o2;
                                     ac.e("Video is fully cached.");
-                                    o3 = o;
+                                    o3 = o2;
                                     while (true) {
                                         try {
                                             if (ac.r) {
                                                 if (b > 3145728) {
-                                                    o3 = o;
+                                                    o3 = o2;
                                                     TestAppLogger.getInstance().logMediaDownloaded("file_size=" + b + " >3MB", "file_name=" + this.b.a(this.e), "fail");
                                                 }
                                                 else {
-                                                    o3 = o;
+                                                    o3 = o2;
                                                     TestAppLogger.getInstance().logMediaDownloaded("file_size=" + b, "file_name=" + this.b.a(this.e), "pass");
                                                 }
                                             }
@@ -107,172 +107,172 @@ public class bl extends bf
                                             return;
                                         }
                                         catch (Exception ex) {
-                                            o3 = o;
+                                            o3 = o2;
                                             ac.e("Error logMediaDownloaded" + ex);
-                                            continue Label_0459_Outer;
+                                            continue Label_0452_Outer;
                                         }
-                                        continue Label_0459_Outer;
+                                        continue Label_0452_Outer;
                                     }
                                 }
-                                break Label_0365;
+                                break Label_0358;
                             }
                             finally {
-                                file = file2;
-                                o = o3;
-                                o4 = o2;
-                                o2 = inputStream;
+                                o2 = o;
+                                o4 = o3;
                             }
                             break;
                         }
-                    Label_1073_Outer:
+                    Label_1074_Outer:
                         while (true) {
-                            Label_0860: {
+                            Label_0861: {
                                 if (n <= 0L) {
-                                    break Label_0860;
+                                    break Label_0861;
                                 }
                                 ac.e("Resuming download from: " + n + " bytes...");
                                 ac.a(this.f, file);
-                                o = this.a.openFileOutput(file.getName(), 32769);
-                            Label_1073:
+                                o2 = this.a.openFileOutput(file.getName(), 32769);
+                            Label_1074:
                                 while (true) {
                                     URL url = null;
-                                Label_0997:
+                                Label_0998:
                                     while (true) {
                                         final String a = this.b.a(this.e);
                                         url = new URL(a);
                                         o4 = url.openConnection();
-                                        o3 = inputStream;
+                                        o3 = s;
                                         while (true) {
                                             long f = 0L;
-                                            Label_0891: {
+                                            Label_0892: {
                                                 try {
                                                     ((URLConnection)o4).setReadTimeout(18000);
-                                                    o3 = inputStream;
+                                                    o3 = s;
                                                     ((URLConnection)o4).setConnectTimeout(18000);
-                                                    o3 = inputStream;
+                                                    o3 = s;
                                                     ((HttpURLConnection)o4).setRequestMethod("GET");
-                                                    o3 = inputStream;
+                                                    o3 = s;
                                                     final String c = ae.c(a);
                                                     if (c != null) {
-                                                        o3 = inputStream;
+                                                        o3 = s;
                                                         ((URLConnection)o4).setRequestProperty("User-Agent", c);
                                                     }
-                                                    o3 = inputStream;
+                                                    o3 = s;
                                                     ((URLConnection)o4).setRequestProperty("Range", "bytes=" + n + "-");
-                                                    o3 = inputStream;
-                                                    inputStream = (InputStream)(o3 = ((URLConnection)o4).getInputStream());
+                                                    o3 = s;
+                                                    o = (o3 = ((URLConnection)o4).getInputStream());
                                                     final byte[] array = new byte[1024];
                                                     while (true) {
                                                         do {
-                                                            o3 = inputStream;
-                                                            final int read = inputStream.read(array);
+                                                            o3 = o;
+                                                            final int read = ((InputStream)o).read(array);
                                                             if (read > 0) {
-                                                                o3 = inputStream;
+                                                                o3 = o;
                                                                 this.f.update(array, 0, read);
-                                                                o3 = inputStream;
-                                                                ((OutputStream)o).write(array, 0, read);
+                                                                o3 = o;
+                                                                ((OutputStream)o2).write(array, 0, read);
                                                                 n += read;
-                                                                o3 = inputStream;
+                                                                o3 = o;
                                                             }
                                                             else {
-                                                                o3 = inputStream;
+                                                                o3 = o;
                                                                 if (this.d) {
-                                                                    break Label_1073;
+                                                                    break Label_1074;
                                                                 }
-                                                                o3 = inputStream;
+                                                                o3 = o;
                                                                 n = file.length();
-                                                                final OutputStream outputStream = null;
-                                                                o3 = inputStream;
+                                                                final String s3 = null;
+                                                                o3 = o;
                                                                 f = this.b.f(this.e);
                                                                 if (f != 0L) {
-                                                                    break Label_0891;
+                                                                    break Label_0892;
                                                                 }
-                                                                o3 = inputStream;
+                                                                o3 = o;
                                                                 ac.e("No CRC to verify against.");
-                                                                o3 = outputStream;
+                                                                o3 = s3;
                                                                 Object string = o3;
                                                                 if (n != b) {
-                                                                    o3 = inputStream;
+                                                                    o3 = o;
                                                                     string = "Incomplete Download. Recieved: " + n + ". Expected: " + this.b.b(this.e) + ".";
                                                                 }
                                                                 if (string != null) {
-                                                                    o3 = inputStream;
+                                                                    o3 = o;
                                                                     file.delete();
-                                                                    o3 = inputStream;
+                                                                    o3 = o;
                                                                     throw new a((String)string);
                                                                 }
-                                                                break Label_0997;
+                                                                break Label_0998;
                                                             }
                                                         } while (!this.c);
-                                                        o3 = inputStream;
+                                                        o3 = o;
                                                         this.d = true;
-                                                        continue Label_1073_Outer;
+                                                        continue Label_1074_Outer;
                                                     }
                                                 }
                                                 finally {
-                                                    file = (File)o3;
-                                                    break Label_0334;
+                                                    s2 = (String)o4;
+                                                    o4 = o2;
+                                                    o2 = o3;
+                                                    break Label_0326;
                                                 }
-                                                break Label_0860;
+                                                break Label_0861;
                                             }
                                             if (this.f.getValue() != f) {
                                                 o3 = "CRC is invalid got: " + this.f.getValue() + ", expected: " + f;
                                                 continue;
                                             }
                                             ac.e("CRC is GOOD: " + f);
-                                            o3 = o2;
+                                            o3 = s2;
                                             continue;
                                         }
                                     }
-                                    o3 = inputStream;
+                                    o3 = o;
                                     try {
                                         if (ac.r) {
                                             if (n > 3145728L) {
-                                                o3 = inputStream;
+                                                o3 = o;
                                                 TestAppLogger.getInstance().logMediaDownloaded("file_size=" + n + " >3MB", "file_name=" + url, "fail");
                                             }
                                             else {
-                                                o3 = inputStream;
+                                                o3 = o;
                                                 TestAppLogger.getInstance().logMediaDownloaded("file_size=" + n, "file_name=" + url, "pass");
                                             }
                                         }
-                                        if (inputStream != null) {
-                                            inputStream.close();
+                                        if (o != null) {
+                                            ((InputStream)o).close();
                                         }
                                         if (o4 != null) {
                                             ((HttpURLConnection)o4).disconnect();
                                         }
-                                        if (o != null) {
-                                            ((OutputStream)o).close();
+                                        if (o2 != null) {
+                                            ((OutputStream)o2).close();
                                         }
                                         return;
                                     }
                                     catch (Exception ex2) {
-                                        o3 = inputStream;
+                                        o3 = o;
                                         ac.e("Error logMediaDownloaded" + ex2);
-                                        continue Label_1073;
+                                        continue Label_1074;
                                     }
-                                    continue Label_1073;
+                                    continue Label_1074;
                                 }
                             }
                             ac.e("Begining Download...");
-                            o = this.a.openFileOutput(file.getName(), 1);
+                            o2 = this.a.openFileOutput(file.getName(), 1);
                             continue;
                         }
                     }
                     continue;
                 }
             }
-            if (file != null) {
-                ((InputStream)file).close();
+            if (o2 != null) {
+                ((InputStream)o2).close();
+            }
+            if (s2 != null) {
+                ((HttpURLConnection)s2).disconnect();
             }
             if (o4 != null) {
-                ((HttpURLConnection)o4).disconnect();
+                ((OutputStream)o4).close();
             }
-            if (o != null) {
-                ((OutputStream)o).close();
-            }
-            throw o2;
+            throw file;
         }
         file.delete();
         throw new a("CRC Failure");

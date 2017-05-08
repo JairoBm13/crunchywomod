@@ -402,19 +402,26 @@ class GraphObjectAdapter<T extends GraphObject> extends BaseAdapter implements S
                 break Label_0038;
             }
             String url = (String)property;
+        Block_4_Outer:
             while (true) {
                 if (url == null) {
                     return null;
                 }
                 try {
                     return new URI(url);
-                    url = s;
-                    // iftrue(Label_0023:, !property instanceof JSONObject)
-                    final ItemPictureData data = GraphObject.Factory.create((JSONObject)property).cast(ItemPicture.class).getData();
-                    url = s;
                     // iftrue(Label_0023:, data == null)
+                    // iftrue(Label_0023:, !property instanceof JSONObject)
+                    ItemPictureData data = null;
+                Block_5:
+                    while (true) {
+                        data = GraphObject.Factory.create((JSONObject)property).cast(ItemPicture.class).getData();
+                        url = s;
+                        break Block_5;
+                        url = s;
+                        continue;
+                    }
                     url = data.getUrl();
-                    continue;
+                    continue Block_4_Outer;
                 }
                 catch (URISyntaxException ex) {}
                 break;

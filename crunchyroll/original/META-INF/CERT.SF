@@ -1,6 +1,6 @@
 Signature-Version: 1.0
-SHA1-Digest-Manifest: VfcGnfMFwStvS6ZYl06lzw5r4eg=
-Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: 2jKKQ8SEJ+6hDfauU7cPEsjwxKo=
+Created-By: 1.0 (Android SignApk)
 
 Name: res/drawable-xhdpi-v4/placeholder_coming_soon.png
 SHA1-Digest: y6twx4jhxqTwbeiZNiPL0qYgXCE=
@@ -836,9 +836,6 @@ SHA1-Digest: vgqWcvgY2JAD5drOmMcKponTfGI=
 Name: res/drawable-hdpi-v4/ic_play_light.png
 SHA1-Digest: V4QV3VYcW5o2PUIbReE7PcVA8iA=
 
-Name: META-INF/services/com.fasterxml.jackson.core.ObjectCodec
-SHA1-Digest: TUt3WJOdFSbY0ZddbRq3WmcKOBM=
-
 Name: res/drawable-hdpi-v4/ic_more_black_trans.png
 SHA1-Digest: JQ/G0GdAEE6P9tY8WCcllXo1+iQ=
 
@@ -1400,9 +1397,6 @@ SHA1-Digest: J2uKPpryiQzwY93PQXWIe/qu8C4=
 Name: res/drawable-mdpi-v4/ic_calender_line.png
 SHA1-Digest: FaV4HI0rtQa69cq16YYQ1hIzjKk=
 
-Name: META-INF/services/com.fasterxml.jackson.core.JsonFactory
-SHA1-Digest: Ba5fEoE3Fm8wW/CHD7Agsn0j4D0=
-
 Name: res/drawable-hdpi-v4/ic_action_stop.png
 SHA1-Digest: XDqcaNz1WYvKMXalbJMR8EF0uds=
 
@@ -1921,7 +1915,7 @@ Name: res/layout/design_navigation_item.xml
 SHA1-Digest: qJjb5FFmRbLHVU5NvPnsJGWdnIg=
 
 Name: classes.dex
-SHA1-Digest: iAs8fi01Mb4SoOkvVWqm2+GVWj0=
+SHA1-Digest: 6Eh/LYStef7j+4Vd7Fci3+DbaEw=
 
 Name: res/drawable-xxhdpi-v4/ic_media_route_off_mono_dark.png
 SHA1-Digest: 8txVQp8qSZV8rcRZjE8EHl46Ooc=

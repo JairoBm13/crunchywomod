@@ -77,9 +77,9 @@ public final class TsChunk extends MediaChunk
                                     continue;
                                 }
                                 return;
+                                o = Util.getRemainderDataSpec(this.dataSpec, this.bytesLoaded);
                                 read = 0;
                                 break;
-                                o = Util.getRemainderDataSpec(this.dataSpec, this.bytesLoaded);
                                 read = 0;
                             }
                             finally {

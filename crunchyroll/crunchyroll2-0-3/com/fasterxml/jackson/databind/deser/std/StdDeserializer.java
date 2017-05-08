@@ -218,12 +218,12 @@ public abstract class StdDeserializer<T> extends JsonDeserializer<T> implements 
                             break Label_0151;
                             try {
                                 return parseDouble((String)trim);
+                                // iftrue(Label_0100:, !"Infinity".equals((Object)trim) && !"INF".equals((Object)trim))
+                                return Double.POSITIVE_INFINITY;
                                 // iftrue(Label_0100:, !"NaN".equals((Object)trim))
                                 return Double.NaN;
                                 // iftrue(Label_0100:, !"-Infinity".equals((Object)trim) && !"-INF".equals((Object)trim))
                                 return Double.NEGATIVE_INFINITY;
-                                // iftrue(Label_0100:, !"Infinity".equals((Object)trim) && !"INF".equals((Object)trim))
-                                return Double.POSITIVE_INFINITY;
                             }
                             catch (IllegalArgumentException ex) {
                                 throw deserializationContext.weirdStringException((String)trim, this._valueClass, "not a valid Double value");
@@ -270,10 +270,10 @@ public abstract class StdDeserializer<T> extends JsonDeserializer<T> implements 
                                     return parseDouble((String)trim);
                                     // iftrue(Label_0092:, !"-Infinity".equals((Object)trim) && !"-INF".equals((Object)trim))
                                     return Double.NEGATIVE_INFINITY;
-                                    // iftrue(Label_0092:, !"NaN".equals((Object)trim))
-                                    return Double.NaN;
                                     // iftrue(Label_0092:, !"Infinity".equals((Object)trim) && !"INF".equals((Object)trim))
                                     return Double.POSITIVE_INFINITY;
+                                    // iftrue(Label_0092:, !"NaN".equals((Object)trim))
+                                    return Double.NaN;
                                 }
                                 catch (IllegalArgumentException ex) {
                                     throw deserializationContext.weirdStringException((String)trim, this._valueClass, "not a valid double value");
@@ -319,10 +319,10 @@ public abstract class StdDeserializer<T> extends JsonDeserializer<T> implements 
                                 return Float.parseFloat((String)trim);
                                 // iftrue(Label_0100:, !"-Infinity".equals((Object)trim) && !"-INF".equals((Object)trim))
                                 return Float.NEGATIVE_INFINITY;
-                                // iftrue(Label_0100:, !"Infinity".equals((Object)trim) && !"INF".equals((Object)trim))
-                                return Float.POSITIVE_INFINITY;
                                 // iftrue(Label_0100:, !"NaN".equals((Object)trim))
                                 return Float.NaN;
+                                // iftrue(Label_0100:, !"Infinity".equals((Object)trim) && !"INF".equals((Object)trim))
+                                return Float.POSITIVE_INFINITY;
                             }
                             catch (IllegalArgumentException ex) {
                                 throw deserializationContext.weirdStringException((String)trim, this._valueClass, "not a valid Float value");

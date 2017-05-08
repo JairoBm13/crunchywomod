@@ -47,19 +47,22 @@ public abstract class FromStringDeserializer<T> extends StdScalarDeserializer<T>
                         throw deserializationContext.weirdStringException((String)o, this._valueClass, "not a valid textual representation");
                     }
                     return deserialize;
-                    Label_0110:
-                    return this._deserializeEmbedded(o, deserializationContext);
-                    // iftrue(Label_0040:, o == null)
-                    // iftrue(Label_0110:, !this._valueClass.isAssignableFrom((Class<?>)o.getClass()))
-                    // iftrue(Label_0118:, jsonParser.getCurrentToken() != JsonToken.VALUE_EMBEDDED_OBJECT)
-                    while (true) {
-                        o = jsonParser.getEmbeddedObject();
-                        deserialize = t;
-                        return (T)o;
-                        continue;
-                    }
                     Label_0118:
                     throw deserializationContext.mappingException(this._valueClass);
+                    // iftrue(Label_0040:, o == null)
+                    // iftrue(Label_0118:, jsonParser.getCurrentToken() != JsonToken.VALUE_EMBEDDED_OBJECT)
+                    Block_6: {
+                        while (true) {
+                            o = jsonParser.getEmbeddedObject();
+                            deserialize = t;
+                            break Block_6;
+                            continue;
+                        }
+                        Label_0110:
+                        return this._deserializeEmbedded(o, deserializationContext);
+                    }
+                    // iftrue(Label_0110:, !this._valueClass.isAssignableFrom((Class<?>)o.getClass()))
+                    return (T)o;
                 }
                 catch (IllegalArgumentException ex) {
                     throw deserializationContext.weirdStringException((String)o, this._valueClass, "not a valid textual representation");

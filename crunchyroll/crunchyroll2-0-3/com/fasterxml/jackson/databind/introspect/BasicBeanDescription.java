@@ -331,29 +331,27 @@ public class BasicBeanDescription extends BeanDescription
         if (b) {
             defaultConstructor.fixAccess();
         }
-    Label_0036:
         while (true) {
             try {
                 return defaultConstructor.getAnnotated().newInstance(new Object[0]);
-                Throwable cause = null;
+                final Throwable cause;
+                Label_0051: {
+                    throw (Error)cause;
+                }
+                // iftrue(Label_0063:, !cause instanceof Error)
+                Label_0063: {
+                    throw (RuntimeException)cause;
+                }
+                // iftrue(Label_0075:, !cause instanceof RuntimeException)
                 Label_0075: {
                     throw new IllegalArgumentException("Failed to instantiate bean of type " + this._classInfo.getAnnotated().getName() + ": (" + ((Exception)cause).getClass().getName() + ") " + cause.getMessage(), cause);
                 }
-                // iftrue(Label_0063:, !cause instanceof Error)
                 // iftrue(Label_0051:, cause.getCause() == null)
-                while (true) {
-                    cause = cause.getCause();
-                    break Label_0036;
-                    Label_0051:
-                    throw (Error)cause;
-                    continue;
-                }
-                Label_0063:
-                // iftrue(Label_0075:, !cause instanceof RuntimeException)
-                throw (RuntimeException)cause;
+                cause = cause.getCause();
+                continue;
             }
             catch (Exception cause) {
-                continue Label_0036;
+                continue;
             }
             break;
         }

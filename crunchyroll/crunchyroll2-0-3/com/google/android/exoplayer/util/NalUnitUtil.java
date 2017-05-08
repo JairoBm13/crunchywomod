@@ -105,7 +105,7 @@ public final class NalUnitUtil
         // monitorenter(scratchEscapePositionsLock)
         int nextUnescapeIndex = 0;
         int n2 = 0;
-    Block_5_Outer:
+    Label_0092_Outer:
         while (true) {
             Label_0080: {
                 if (nextUnescapeIndex >= n) {
@@ -120,35 +120,32 @@ public final class NalUnitUtil
                         NalUnitUtil.scratchEscapePositions[n2] = n3;
                         nextUnescapeIndex = n3 + 3;
                         ++n2;
-                        continue Block_5_Outer;
+                        continue Label_0092_Outer;
                     }
-                    continue Block_5_Outer;
+                    continue Label_0092_Outer;
                     final int n4 = n - n2;
                     nextUnescapeIndex = 0;
                     int n5 = 0;
                     n = 0;
-                    // monitorexit(scratchEscapePositionsLock)
+                    // iftrue(Label_0159:, n >= n2)
                     while (true) {
-                        Label_0092: {
-                            break Label_0092;
-                            Label_0159: {
-                                System.arraycopy(array, nextUnescapeIndex, array, n5, n4 - n5);
-                            }
-                            return n4;
-                            final int n6 = NalUnitUtil.scratchEscapePositions[n] - nextUnescapeIndex;
-                            System.arraycopy(array, nextUnescapeIndex, array, n5, n6);
-                            final int n7 = n5 + n6;
-                            final int n8 = n7 + 1;
-                            array[n7] = 0;
-                            n5 = n8 + 1;
-                            array[n8] = 0;
-                            nextUnescapeIndex += n6 + 3;
-                            ++n;
-                        }
+                        final int n6 = NalUnitUtil.scratchEscapePositions[n] - nextUnescapeIndex;
+                        System.arraycopy(array, nextUnescapeIndex, array, n5, n6);
+                        final int n7 = n5 + n6;
+                        final int n8 = n7 + 1;
+                        array[n7] = 0;
+                        n5 = n8 + 1;
+                        array[n8] = 0;
+                        nextUnescapeIndex += n6 + 3;
+                        ++n;
                         continue;
                     }
+                    Label_0159: {
+                        System.arraycopy(array, nextUnescapeIndex, array, n5, n4 - n5);
+                    }
+                    // monitorexit(scratchEscapePositionsLock)
+                    return n4;
                 }
-                // iftrue(Label_0159:, n >= n2)
                 finally {
                     try {
                     }

@@ -118,6 +118,7 @@ public final class IndexedListSerializer extends AsArraySerializerBase<List<?>>
         final int size = list.size();
         if (size != 0) {
             final TypeSerializer valueTypeSerializer = this._valueTypeSerializer;
+        Block_4_Outer:
             for (int i = 0; i < size; ++i) {
                 final Object value = list.get(i);
                 Label_0053: {
@@ -126,10 +127,14 @@ public final class IndexedListSerializer extends AsArraySerializerBase<List<?>>
                     }
                     try {
                         serializerProvider.defaultSerializeNull(jsonGenerator);
-                        continue;
-                        // iftrue(Label_0085:, valueTypeSerializer != null)
-                        jsonSerializer.serialize(value, jsonGenerator, serializerProvider);
+                        continue Block_4_Outer;
+                        while (true) {
+                            jsonSerializer.serialize(value, jsonGenerator, serializerProvider);
+                            continue Block_4_Outer;
+                            continue;
+                        }
                     }
+                    // iftrue(Label_0085:, valueTypeSerializer != null)
                     catch (Exception ex) {
                         this.wrapAndThrow(serializerProvider, ex, list, i);
                     }

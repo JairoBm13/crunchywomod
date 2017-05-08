@@ -524,20 +524,20 @@ public class n extends View implements SensorEventListener, af.b, m.a
                     if (a.c() == com.tremorvideo.sdk.android.richmedia.h.b.U) {
                         final o b = this.c.b();
                         this.c.a(this.f, this.m);
-                        final String name = a.b().name();
-                        final String[] array = { "event_response", "pause-and-go-to-scene" };
-                        final String[] array2 = { "internal_tag", Integer.toString(a.a()) };
-                        final String string = Integer.toString(b.d());
-                        final String[] array3 = { "paused_scene", Integer.toString(b.d()) };
-                        final String string2 = Long.toString(b.a.b);
-                        String string3;
+                        final String[] array = { "event_action", a.b().name() };
+                        final String[] array2 = { "event_response", "pause-and-go-to-scene" };
+                        final String[] array3 = { "internal_tag", Integer.toString(a.a()) };
+                        final String[] array4 = { "current_scene", Integer.toString(b.d()) };
+                        final String[] array5 = { "paused_scene", Integer.toString(b.d()) };
+                        final String[] array6 = { "timeline_paused", Long.toString(b.a.b) };
+                        String string;
                         if (b.a.e == null) {
-                            string3 = "null";
+                            string = "null";
                         }
                         else {
-                            string3 = Integer.toString(b.a.e.d());
+                            string = Integer.toString(b.a.e.d());
                         }
-                        ac.a("event-triggered", new String[][] { { "event_action", name }, array, array2 }, new String[][] { { "current_scene", string }, array3, { "timeline_paused", string2 }, { "paused_video", string3 }, { "video_paused", Integer.toString(b.a.g) } });
+                        ac.a("event-triggered", new String[][] { array, array2, array3 }, new String[][] { array4, array5, array6, { "paused_video", string }, { "video_paused", Integer.toString(b.a.g) } });
                         if (this.f.d) {
                             this.post((Runnable)new Runnable() {
                                 @Override
@@ -562,12 +562,12 @@ public class n extends View implements SensorEventListener, af.b, m.a
                             this.a(b3, b3.a.a);
                             this.c.a(b3.a.c, b3.a.d);
                             final o b4 = this.c.b().g().b(intValue);
-                            Label_2290: {
+                            Label_2294: {
                                 if (b3.a.e != null) {
                                     this.a(b3.a.e, b3.a.f, b3.a.g, b3.a.h);
                                     ac.a("event-triggered", new String[][] { { "event_action", a.b().name() }, { "event_response", "resume-scene" }, { "internal_tag", Integer.toString(a.a()) } }, new String[][] { { "current_scene", Integer.toString(b2.d()) }, { "resumed_scene", Integer.toString(b4.d()) }, { "timeline_resumed", Long.toString(this.c.j()) }, { "resumed_video", Integer.toString(b3.a.e.d()) }, { "video_resumed", Integer.toString(b3.a.g) } });
                                     final int n2 = -1;
-                                    break Label_2290;
+                                    break Label_2294;
                                 }
                                 if (this.f.n != null) {
                                     int n2 = this.b(this.f.n.c());
@@ -586,14 +586,14 @@ public class n extends View implements SensorEventListener, af.b, m.a
                                     final int n2 = -1;
                                 }
                                 ac.a("event-triggered", new String[][] { { "event_action", a.b().name() }, { "event_response", "resume-scene" }, { "internal_tag", Integer.toString(a.a()) } }, new String[][] { { "current_scene", Integer.toString(b2.d()) }, { "resumed_scene", Integer.toString(b4.d()) }, { "timeline_resumed", Long.toString(this.c.j()) }, { "resumed_video", "null" }, { "video_resumed", "-1" } });
-                                break Label_2290;
+                                break Label_2294;
                             }
                             continue;
                         }
                         if (a.c() == com.tremorvideo.sdk.android.richmedia.h.b.c) {
-                            final int[] array4 = (int[])a.e();
-                            this.a(this.c.b().g().b(array4[0]));
-                            this.c.b(array4[1]);
+                            final int[] array7 = (int[])a.e();
+                            this.a(this.c.b().g().b(array7[0]));
+                            this.c.b(array7[1]);
                             this.c.i();
                             final int n2 = n;
                             continue;
@@ -722,11 +722,11 @@ public class n extends View implements SensorEventListener, af.b, m.a
                                     continue;
                                 }
                                 if (a.c() == com.tremorvideo.sdk.android.richmedia.h.b.Y) {
-                                    final int[] array5 = (int[])a.e();
-                                    ac.a("event-triggered", new String[][] { { "event_action", a.b().name() }, { "event_response", "GotoAndPlayDirectional" } }, new String[][] { { "current_scene", Integer.toString(this.c.b().d()) }, { "current_time", Long.toString(this.c.j()) }, { "play_forward", Boolean.toString(array5[1] == 1) }, { "play_loop", Boolean.toString(array5[2] == 1) }, { "playback_time", Integer.toString(array5[0]) } });
+                                    final int[] array8 = (int[])a.e();
+                                    ac.a("event-triggered", new String[][] { { "event_action", a.b().name() }, { "event_response", "GotoAndPlayDirectional" } }, new String[][] { { "current_scene", Integer.toString(this.c.b().d()) }, { "current_time", Long.toString(this.c.j()) }, { "play_forward", Boolean.toString(array8[1] == 1) }, { "play_loop", Boolean.toString(array8[2] == 1) }, { "playback_time", Integer.toString(array8[0]) } });
                                     this.c.b = false;
-                                    this.c.b(array5[0]);
-                                    this.c.a(array5[1], array5[2] == 1);
+                                    this.c.b(array8[0]);
+                                    this.c.a(array8[1], array8[2] == 1);
                                     final int n2 = n;
                                     continue;
                                 }
@@ -740,15 +740,15 @@ public class n extends View implements SensorEventListener, af.b, m.a
                                 if (a.c() != com.tremorvideo.sdk.android.richmedia.h.b.X) {
                                     continue;
                                 }
-                                final boolean[] array6 = (boolean[])a.e();
-                                ac.a("event-triggered", new String[][] { { "event_action", a.b().name() }, { "event_response", "play-current-scene" } }, new String[][] { { "current_scene", Integer.toString(this.c.b().d()) }, { "current_time", Long.toString(this.c.j()) }, { "play_forward", Boolean.toString(array6[0]) }, { "play_loop", Boolean.toString(array6[1]) } });
+                                final boolean[] array9 = (boolean[])a.e();
+                                ac.a("event-triggered", new String[][] { { "event_action", a.b().name() }, { "event_response", "play-current-scene" } }, new String[][] { { "current_scene", Integer.toString(this.c.b().d()) }, { "current_time", Long.toString(this.c.j()) }, { "play_forward", Boolean.toString(array9[0]) }, { "play_loop", Boolean.toString(array9[1]) } });
                                 this.c.b = false;
-                                if (array6[0]) {
-                                    this.c.a(1, array6[1]);
+                                if (array9[0]) {
+                                    this.c.a(1, array9[1]);
                                     n2 = n;
                                     continue;
                                 }
-                                this.c.a(-1, array6[1]);
+                                this.c.a(-1, array9[1]);
                                 n2 = n;
                                 continue;
                             }

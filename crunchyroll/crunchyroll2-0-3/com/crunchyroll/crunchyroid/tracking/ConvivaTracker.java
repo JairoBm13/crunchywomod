@@ -114,9 +114,9 @@ public class ConvivaTracker
                 while (true) {
                     LivePass.reportError(this.mSessionId.get(), s, 1);
                     return;
-                    s = "Source not found";
-                    continue;
                     s = "Media unsupported";
+                    continue;
+                    s = "Source not found";
                     continue;
                 }
             }

@@ -79,7 +79,7 @@ public class AppEventsLogger
                 break Label_0086;
             }
             this.accessTokenAppId = new AccessTokenAppIdPair(activeSession);
-        Label_0097_Outer:
+            Label_0097_Outer:Block_7_Outer:
             while (true) {
                 staticLock = (String)AppEventsLogger.staticLock;
                 synchronized (staticLock) {
@@ -89,9 +89,12 @@ public class AppEventsLogger
                     initializeTimersIfNeeded();
                     return;
                     while (true) {
-                        this.accessTokenAppId = new AccessTokenAppIdPair(null, staticLock);
-                        continue Label_0097_Outer;
-                        Utility.getMetadataApplicationId(context);
+                        while (true) {
+                            this.accessTokenAppId = new AccessTokenAppIdPair(null, staticLock);
+                            continue Label_0097_Outer;
+                            Utility.getMetadataApplicationId(context);
+                            continue Block_7_Outer;
+                        }
                         continue;
                     }
                 }

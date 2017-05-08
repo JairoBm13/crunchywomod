@@ -373,17 +373,20 @@ public final class Settings
                         return Response.createResponsesFromString("true", null, new RequestBatch(new Request[] { postRequest }), true).get(0);
                     }
                     return new Response(null, null, null, (GraphObject)create2, true);
+                    // iftrue(Label_0340:, executeAndWait.getGraphObject() == null || executeAndWait.getGraphObject().getInnerJSONObject() == null)
+                    Response executeAndWait = null;
+                Label_0340:
                     while (true) {
-                        ((SharedPreferences$Editor)edit).apply();
-                        return;
+                        ((SharedPreferences$Editor)edit).putString(string2, executeAndWait.getGraphObject().getInnerJSONObject().toString());
+                        break Label_0340;
                         executeAndWait = postRequest.executeAndWait();
                         edit = (String)sharedPreferences.edit();
                         ((SharedPreferences$Editor)edit).putLong(string, System.currentTimeMillis());
-                        ((SharedPreferences$Editor)edit).putString(string2, executeAndWait.getGraphObject().getInnerJSONObject().toString());
                         continue;
                     }
+                    ((SharedPreferences$Editor)edit).apply();
+                    return executeAndWait;
                 }
-                // iftrue(Label_0340:, executeAndWait.getGraphObject() == null || executeAndWait.getGraphObject().getInnerJSONObject() == null)
                 catch (JSONException ex2) {
                     create2 = edit;
                     continue;

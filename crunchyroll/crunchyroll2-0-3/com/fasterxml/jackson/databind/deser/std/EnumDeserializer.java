@@ -119,13 +119,14 @@ public class EnumDeserializer extends StdScalarDeserializer<Enum<?>>
                         while (true) {
                             s = jsonParser.getValueAsLong();
                             return this._factory.invoke(this._enumClass, s);
-                            Label_0074: {
-                                throw deserializationContext.mappingException(this._enumClass);
-                            }
                             s = jsonParser.getValueAsInt();
                             return this._factory.invoke(this._enumClass, s);
-                            Label_0054:
-                            continue;
+                            Label_0054: {
+                                continue;
+                            }
+                        }
+                        Label_0074: {
+                            throw deserializationContext.mappingException(this._enumClass);
                         }
                         continue;
                     }

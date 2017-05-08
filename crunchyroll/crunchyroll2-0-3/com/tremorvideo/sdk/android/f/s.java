@@ -249,25 +249,22 @@ public class s extends WebView
                                     s2 = replace.replace("<head>", "<head><script type='text/javascript' src='" + string + "'></script>");
                                     n = 1;
                                     continue Label_0326_Outer;
-                                    String replace2 = null;
-                                    Label_0514: {
-                                        s4 = replace2;
-                                    }
-                                    // iftrue(Label_0508:, replace2.indexOf("<body") == -1)
                                     // iftrue(Label_0514:, this.c == null || !this.c.f().a("disable-video-tag-autoplay"))
                                     // iftrue(Label_0508:, s2.indexOf("<video") == -1)
+                                    String replace2 = null;
+                                Block_15:
+                                    while (true) {
+                                        replace2 = s2.replace("autoplay", "").replace("<video", "<video preload='none' ");
+                                        break Block_15;
+                                        s4 = s2;
+                                        continue;
+                                    }
+                                    s4 = replace2;
+                                    // iftrue(Label_0508:, replace2.indexOf("<body") == -1)
                                     Label_0508: {
-                                        Block_16: {
-                                            break Block_16;
-                                        Block_15:
-                                            while (true) {
-                                                replace2 = s2.replace("autoplay", "").replace("<video", "<video preload='none' ");
-                                                break Block_15;
-                                                s4 = s2;
-                                                continue;
-                                            }
+                                        break Label_0508;
+                                        Label_0514: {
                                             s4 = replace2;
-                                            break Label_0508;
                                         }
                                         s4 = replace2.replace("<body", "<body onload=\"document.getElementsByTagName('video')[0].play()\"");
                                     }

@@ -1458,6 +1458,7 @@ class LocalCache<K, V> extends AbstractMap<K, V> implements ConcurrentMap<K, V>
         Label_0071_Outer:
             while (true) {
                 this.lock();
+            Label_0071:
                 while (true) {
                 Label_0164:
                     while (true) {
@@ -1476,11 +1477,9 @@ class LocalCache<K, V> extends AbstractMap<K, V> implements ConcurrentMap<K, V>
                                 }
                                 break Label_0164;
                                 // iftrue(Label_0092:, n >= table.length())
-                                while (true) {
-                                    table.set(n, (ReferenceEntry<K, V>)null);
-                                    ++n;
-                                    continue Label_0071_Outer;
-                                }
+                                table.set(n, (ReferenceEntry<K, V>)null);
+                                ++n;
+                                continue Label_0071;
                                 Label_0092: {
                                     this.clearReferenceQueues();
                                 }
@@ -1500,7 +1499,7 @@ class LocalCache<K, V> extends AbstractMap<K, V> implements ConcurrentMap<K, V>
                         continue Label_0071_Outer;
                     }
                     int n = 0;
-                    continue;
+                    continue Label_0071;
                 }
             }
         }

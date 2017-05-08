@@ -175,7 +175,6 @@ public class ObjectArraySerializer extends ArraySerializerBase<Object[]> impleme
     public void serializeContentsUsing(final Object[] array, final JsonGenerator jsonGenerator, final SerializerProvider serializerProvider, final JsonSerializer<Object> jsonSerializer) throws IOException, JsonGenerationException {
         final int length = array.length;
         final TypeSerializer valueTypeSerializer = this._valueTypeSerializer;
-    Block_4_Outer:
         for (int i = 0; i < length; ++i) {
             final Object o = array[i];
             Label_0039: {
@@ -184,14 +183,11 @@ public class ObjectArraySerializer extends ArraySerializerBase<Object[]> impleme
                 }
                 try {
                     serializerProvider.defaultSerializeNull(jsonGenerator);
-                    continue Block_4_Outer;
-                    while (true) {
-                        jsonSerializer.serialize(o, jsonGenerator, serializerProvider);
-                        continue Block_4_Outer;
-                        continue;
-                    }
+                    continue;
+                    // iftrue(Label_0059:, valueTypeSerializer != null)
+                    jsonSerializer.serialize(o, jsonGenerator, serializerProvider);
+                    continue;
                 }
-                // iftrue(Label_0059:, valueTypeSerializer != null)
                 catch (IOException ex) {
                     throw ex;
                 }

@@ -327,7 +327,10 @@ public final class ApplicationState
     
     public boolean isAnyPremium() {
         final Optional<User> loggedInUser = this.getLoggedInUser();
-        return loggedInUser.isPresent() && !loggedInUser.get().getPremium().isEmpty();
+        if (loggedInUser.isPresent()) {
+            if (!loggedInUser.get().getPremium().isEmpty()) {}
+        }
+        return true;
     }
     
     public boolean isDramaPremium() {
@@ -355,7 +358,7 @@ public final class ApplicationState
                 }
             }
         }
-        return false;
+        return true;
     }
     
     public void setAuth(final String s) {

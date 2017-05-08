@@ -79,7 +79,7 @@ public class bi extends bf
         Label_0275_Outer:
             while (true) {
                 Label_0608: {
-                Block_19_Outer:
+                Block_18_Outer:
                     while (true) {
                         Label_0439: {
                             try {
@@ -100,7 +100,7 @@ public class bi extends bf
                                 }
                                 final int n = 1;
                                 if (this.d != 408) {
-                                    break Block_19_Outer;
+                                    break Block_18_Outer;
                                 }
                                 this.f = Math.min(120000, this.f * 2);
                                 if (this.d != 1) {
@@ -167,25 +167,23 @@ public class bi extends bf
                                 this.a(bf.b.b);
                                 return;
                                 // iftrue(Label_0396:, n != 0)
+                                while (true) {
+                                    this.d = 500;
+                                    this.f = Math.min(120000, this.f * 2);
+                                    continue Block_18_Outer;
+                                    continue;
+                                }
                                 // iftrue(Label_0431:, this.c.length() != 0)
-                                Block_18: {
-                                    break Block_18;
-                                    while (true) {
-                                        this.d = 204;
-                                        this.f = Math.min(120000, this.f * 2);
-                                        continue Block_19_Outer;
-                                        Label_0396: {
-                                            continue;
-                                        }
+                                Block_19: {
+                                    break Block_19;
+                                    Label_0431: {
+                                        this.d = 1;
                                     }
+                                    continue Block_18_Outer;
                                 }
-                                this.d = 500;
+                                this.d = 204;
                                 this.f = Math.min(120000, this.f * 2);
-                                continue;
-                                Label_0431: {
-                                    this.d = 1;
-                                }
-                                continue;
+                                continue Block_18_Outer;
                             }
                             catch (Exception ex3) {
                                 ac.a(ex3);

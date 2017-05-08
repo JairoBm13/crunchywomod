@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
-Built-By: 1.5.0
-Created-By: Android Gradle 1.5.0
+Created-By: 1.0 (Android SignApk)
 
 Name: res/drawable-xhdpi-v4/placeholder_coming_soon.png
 SHA1-Digest: J3xeoUmXsQqv1yRxniHCW2l+CJc=
@@ -836,9 +835,6 @@ SHA1-Digest: Sz5is2BCuPFiHdGVCzTOIJoAnLg=
 Name: res/drawable-hdpi-v4/ic_play_light.png
 SHA1-Digest: KVZ1LbKULopJdz1ASRYEZ0MZyKE=
 
-Name: META-INF/services/com.fasterxml.jackson.core.ObjectCodec
-SHA1-Digest: mECZ0InRcm6Sm6/P0dIQdmb5YtU=
-
 Name: res/drawable-hdpi-v4/ic_more_black_trans.png
 SHA1-Digest: 0F28eHRG0k6spKx1gdtzs4DJROo=
 
@@ -1400,9 +1396,6 @@ SHA1-Digest: A1jmf+4/FK84T7WYmxH0Y09wAFg=
 Name: res/drawable-mdpi-v4/ic_calender_line.png
 SHA1-Digest: tlRtQ4Agp4rInVK8q29Fd/3AL/A=
 
-Name: META-INF/services/com.fasterxml.jackson.core.JsonFactory
-SHA1-Digest: wj+dD6oGz5YGyIP+iorCZD19Vfo=
-
 Name: res/drawable-hdpi-v4/ic_action_stop.png
 SHA1-Digest: Wp0Fh3i+tOltH5aKKamOzD2d/wY=
 
@@ -1921,7 +1914,7 @@ Name: res/layout/design_navigation_item.xml
 SHA1-Digest: um2Cnnd8RyC14aQNUlPoUBSJh2I=
 
 Name: classes.dex
-SHA1-Digest: kr1LoOjHb60mvbvKqqKD8CxK14A=
+SHA1-Digest: 3JzXHhcpgJVX1ylsrGB3wU4eR1E=
 
 Name: res/drawable-xxhdpi-v4/ic_media_route_off_mono_dark.png
 SHA1-Digest: V3hzAB92PC/XA8xllDA1Z259Q9I=

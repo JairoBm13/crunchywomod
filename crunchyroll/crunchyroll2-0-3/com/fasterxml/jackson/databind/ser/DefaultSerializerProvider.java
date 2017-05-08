@@ -14,8 +14,8 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import java.io.IOException;
 import com.fasterxml.jackson.core.SerializableString;
 import com.fasterxml.jackson.databind.cfg.MapperConfig;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.BeanProperty;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializationConfig;
 import com.fasterxml.jackson.databind.ser.impl.WritableObjectId;
@@ -82,7 +82,7 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
                 break Label_0029;
             }
             JsonSerializer<Object> jsonSerializer = this.getDefaultNullValueSerializer();
-        Block_6_Outer:
+        Block_4_Outer:
             while (true) {
                 try {
                     jsonSerializer.serialize(o, jsonGenerator, this);
@@ -90,31 +90,31 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
                         jsonGenerator.writeEndObject();
                     }
                     return;
-                    // iftrue(Label_0096:, rootName != null)
+                    // iftrue(Label_0182:, enabled == 0)
                     // iftrue(Label_0107:, rootName.length() != 0)
-                    Block_4: {
-                        String rootName;
-                        while (true) {
-                            continue Block_6_Outer;
-                            jsonSerializer = this.findTypedValueSerializer(o.getClass(), true, null);
-                            rootName = this._config.getRootName();
-                            break Block_4;
-                            Label_0096: {
-                                continue;
-                            }
-                        }
+                    // iftrue(Label_0096:, rootName != null)
+                    String rootName;
+                    Block_5:Block_6_Outer:
+                    while (true) {
+                        enabled = (this._config.isEnabled(SerializationFeature.WRAP_ROOT_VALUE) ? 1 : 0);
+                        break Block_5;
                         Label_0107: {
                             jsonGenerator.writeStartObject();
                         }
                         jsonGenerator.writeFieldName(rootName);
                         enabled = 1;
+                        while (true) {
+                            continue Block_4_Outer;
+                            Label_0096:
+                            continue;
+                        }
+                        jsonSerializer = this.findTypedValueSerializer(o.getClass(), true, null);
+                        rootName = this._config.getRootName();
                         continue Block_6_Outer;
                     }
-                    enabled = (this._config.isEnabled(SerializationFeature.WRAP_ROOT_VALUE) ? 1 : 0);
-                    // iftrue(Label_0182:, enabled == 0)
                     jsonGenerator.writeStartObject();
                     jsonGenerator.writeFieldName(this._rootNames.findRootName(o.getClass(), this._config));
-                    continue Block_6_Outer;
+                    continue Block_4_Outer;
                 }
                 catch (IOException ex) {
                     throw ex;

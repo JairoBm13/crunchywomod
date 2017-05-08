@@ -107,6 +107,7 @@ public class JSONParser
                                                     break Label_0961;
                                                 }
                                             }
+                                            throw new ParseException(this.getPosition(), 1, this.token);
                                             // iftrue(Label_0931:, this.status != -1)
                                             throw new ParseException(this.getPosition(), 1, this.token);
                                         }

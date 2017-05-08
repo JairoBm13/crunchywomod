@@ -467,15 +467,15 @@ final class InjectorImpl implements Injector, Lookups
         BindingImpl<?> bindingImpl;
         InjectorImpl injectorImpl;
         Key<Provider<T>> key2;
-        Errors errors;
-        Key<T> key3;
-        BindingImpl<Object> bindingImpl2;
-        InjectorImpl injectorImpl2;
-        Object o;
         BindingImpl<Object> binding;
         BindingImpl<Object> binding2;
-        final Key<T> key4;
-        Block_6_Outer:Label_0068_Outer:
+        InjectorImpl injectorImpl2;
+        Key<Provider<T>> key3;
+        Errors errors;
+        Key<T> key4;
+        BindingImpl<Object> bindingImpl2;
+        final Key<T> key5;
+        Block_7_Outer:Label_0068_Outer:
         while (true) {
             while (true) {
                 if (parent != null) {
@@ -485,38 +485,38 @@ final class InjectorImpl implements Injector, Lookups
                             return (BindingImpl<T>)bindingImpl;
                         }
                         parent = parent.parent;
-                        continue Block_6_Outer;
+                        continue Block_7_Outer;
                         while (true) {
                             injectorImpl = this;
                             key2 = key;
-                            errors = new Errors();
-                            key3 = getProvidedKey(key2, errors);
-                            bindingImpl2 = injectorImpl.getExistingBinding((Key<Object>)key3);
-                            injectorImpl2 = this;
-                            o = key;
-                            binding = injectorImpl2.getBinding((Key<Object>)o);
+                            binding = injectorImpl.getBinding((Key<Object>)key2);
                             binding2 = binding;
                             return (BindingImpl<T>)binding2;
+                            injectorImpl2 = this;
+                            key3 = key;
+                            errors = new Errors();
+                            key4 = getProvidedKey(key3, errors);
+                            bindingImpl2 = injectorImpl2.getExistingBinding((Key<Object>)key4);
                             continue Label_0068_Outer;
                         }
                     }
-                    // iftrue(Label_0124:, bindingImpl2 == null)
                     // monitorexit(lock)
                     // iftrue(Label_0124:, !isProvider((Key<?>)key))
+                    // iftrue(Label_0124:, bindingImpl2 == null)
                     finally {
-                        key = (Key<Provider<T>>)key4;
+                        key = (Key<Provider<T>>)key5;
                     }
                     // monitorexit(lock)
                     try {
-                        injectorImpl = this;
-                        key2 = key;
+                        injectorImpl2 = this;
+                        key3 = key;
                         errors = new Errors();
-                        key3 = getProvidedKey(key2, errors);
-                        bindingImpl2 = injectorImpl.getExistingBinding((Key<Object>)key3);
+                        key4 = getProvidedKey(key3, errors);
+                        bindingImpl2 = injectorImpl2.getExistingBinding((Key<Object>)key4);
                         if (bindingImpl2 != null) {
-                            injectorImpl2 = this;
-                            o = key;
-                            binding = (binding2 = injectorImpl2.getBinding((Key<Object>)o));
+                            injectorImpl = this;
+                            key2 = key;
+                            binding = (binding2 = injectorImpl.getBinding((Key<Object>)key2));
                             return (BindingImpl<T>)binding2;
                         }
                     }
