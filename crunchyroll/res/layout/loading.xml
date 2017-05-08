@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="@string/loading_tag" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/loading_view" android:layout_width="@dimen/loading_icon_side_length" android:layout_height="@dimen/loading_icon_side_length" android:indeterminateOnly="true" android:layout_centerInParent="true" style="@style/loadingProgressIndicator" />
+</RelativeLayout>

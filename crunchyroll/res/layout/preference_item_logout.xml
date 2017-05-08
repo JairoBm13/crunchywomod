@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="32.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/logout" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/log_out" android:singleLine="true" style="@style/buttonTextOnly.orange" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/cr_orange" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/hime" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hime_cry" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

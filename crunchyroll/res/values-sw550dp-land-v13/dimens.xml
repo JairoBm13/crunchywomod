@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="popup_media_info_margin_lr">190.0dip</dimen>
+    <dimen name="preference_margin_lr">75.0dip</dimen>
+    <dimen name="series_item_list_margin_right">164.0dip</dimen>
+    <dimen name="upsell_margin_lr">100.0dip</dimen>
+    <dimen name="media_info_lr_margin">142.0dip</dimen>
+    <dimen name="media_info_tb_margin">0.0dip</dimen>
+    <dimen name="popup_hime_translation_y">0.0dip</dimen>
+    <dimen name="popup_width">700.0dip</dimen>
+    <dimen name="upsell_title_right_margin">50.0dip</dimen>
+</resources>

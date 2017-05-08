@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/home_menu_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/close" android:background="?android:selectableItemBackground" android:padding="16.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_black" />
+        </FrameLayout>
+    </RelativeLayout>
+    <TextView android:id="@id/upsell_reason" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/upsell_margin_lr" android:layout_marginRight="@dimen/upsell_margin_lr" android:layout_marginBottom="12.0dip" android:text="@string/upsell_premium" style="@style/tab1.black" />
+    <TextView android:id="@id/upsell_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/upsell_margin_lr" android:layout_marginRight="@dimen/upsell_margin_lr" android:layout_marginBottom="16.0dip" android:text="@string/upgrade_title" style="@style/display1.orange" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/hime" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/hime_happy" android:layout_weight="1.0" />
+    <Button android:id="@id/create_account" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/upsell_margin_lr" android:layout_marginTop="24.0dip" android:layout_marginRight="@dimen/upsell_margin_lr" android:text="@string/create_account" android:singleLine="true" style="@style/button.orange.unpadded" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/login" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/log_in" style="@style/buttonTextOnly.orange" />
+</LinearLayout>

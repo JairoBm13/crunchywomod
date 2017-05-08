@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:background="@color/cr_background_app" android:paddingLeft="20.0dip" android:paddingTop="@dimen/standalone_fragment_top_margin" android:paddingRight="20.0dip" android:paddingBottom="@dimen/fragment_vertical_paddings" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="false">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/email_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/your_email" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/caption2.black54" />
+            <EditText android:id="@id/email" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:hint="@string/your_email" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionNext" style="@style/subheader2.black">
+                <requestFocus />
+            </EditText>
+            <View android:background="@color/light_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/country_spinner" />
+            <TextView android:id="@id/membership_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:hint="@string/membership" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/caption2.black54" />
+            <EditText android:enabled="false" android:id="@id/membership" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:hint="@string/membership" android:singleLine="true" android:inputType="text" android:imeOptions="actionNext" style="@style/subheader2.black" />
+            <View android:background="@color/light_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/country_spinner" />
+            <TextView android:id="@id/problem_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="@string/problem" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/caption2.black54" />
+            <Spinner android:id="@id/problem" android:background="@drawable/spinner_drop_down_gray_trans" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_alignParentTop="true" />
+            <View android:background="@color/light_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/country_spinner" />
+            <TextView android:id="@id/subject_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="@string/subject" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/caption2.black54" />
+            <EditText android:id="@id/subject" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:hint="@string/subject" android:singleLine="true" android:inputType="text" android:imeOptions="actionNext" style="@style/subheader2.black" />
+            <View android:background="@color/light_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/country_spinner" />
+            <TextView android:id="@id/description_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="@string/your_message" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/caption2.black54" />
+            <EditText android:gravity="center|left|top" android:id="@id/description" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:hint="@string/your_message" android:maxLines="3" android:minLines="1" android:inputType="textMultiLine" style="@style/subheader2.black" />
+            <View android:background="@color/light_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/country_spinner" />
+            <CheckBox android:id="@id/receive_response" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginBottom="10.0dip" style="@style/caption2.black" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/loading_overlay" android:background="#aa000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/loading_view" android:layout_width="@dimen/loading_icon_side_length" android:layout_height="@dimen/loading_icon_side_length" android:indeterminateOnly="true" style="@style/loadingProgressIndicator" />
+    </LinearLayout>
+</LinearLayout>

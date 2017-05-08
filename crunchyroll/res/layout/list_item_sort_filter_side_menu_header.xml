@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="@string/header_tag" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/sort_filter_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_side_menu_padding_left" android:layout_marginTop="24.0dip" android:layout_marginRight="@dimen/main_side_menu_padding_right" android:text="SORT BY" style="@style/menu1.black54" />
+    <View android:background="@color/black54" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/main_side_menu_padding_left" android:layout_marginTop="3.0dip" android:layout_marginRight="@dimen/main_side_menu_padding_right" android:layout_marginBottom="8.0dip" />
+</LinearLayout>

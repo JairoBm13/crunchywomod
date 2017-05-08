@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="horizontal" android:id="@id/sort_menu_wrapper" android:background="#aa000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0">
+            <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@id/sort_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="85.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/popular_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="POPULAR" />
+                    <ImageView android:id="@id/popular" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/sort_popular_selector" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/seasons_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SEASONS" />
+                    <ImageView android:id="@id/seasons" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/sort_seasons_selector" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/atoz_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A to Z" />
+                    <ImageView android:id="@id/atoz" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/sort_atoz_selector" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/genre_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GENRE" />
+                    <ImageView android:id="@id/genre" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/sort_genre_selector" />
+                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/ic_small_arrow_white" />
+                </LinearLayout>
+            </LinearLayout>
+            <ListView android:id="@id/genre_menu" android:background="@color/cr_orange" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" />
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton android:id="@id/close" android:layout_width="@dimen/floating_action_button_size" android:layout_height="@dimen/floating_action_button_size" android:layout_marginRight="@dimen/floating_action_button_offset_x" android:layout_marginBottom="@dimen/floating_action_button_offset_y" android:src="@drawable/ic_close_white" app:layout_anchor="@id/sort_menu_wrapper" app:layout_anchorGravity="end|bottom|center" app:fabSize="normal" app:borderWidth="0.0dip" app:backgroundTint="@color/cr_orange" />
+</android.support.design.widget.CoordinatorLayout>

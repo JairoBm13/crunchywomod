@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/home_menu_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/close" android:background="?android:selectableItemBackground" android:padding="16.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_black" />
+        </FrameLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/upsell_main_text" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="48.0dip" android:layout_marginRight="48.0dip" android:layout_marginBottom="48.0dip">
+        <LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="@integer/upsell_text_weight">
+            <TextView android:id="@id/upsell_reason" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="@string/upsell_premium" style="@style/tab1.black" />
+            <TextView android:id="@id/upsell_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/upsell_title_right_margin" android:text="@string/upgrade_title" style="@style/display1.orange" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingRight="20.0dip" android:clipChildren="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <RelativeLayout android:id="@id/point_group_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+                    <ImageView android:id="@id/point_0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_checkbox_orange" android:layout_centerVertical="true" />
+                    <TextView android:id="@id/point_text_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="AD-FREE" android:layout_toRightOf="@id/point_0" android:layout_centerVertical="true" style="@style/tab1.black54" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/point_group_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <ImageView android:id="@id/point_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_checkbox_orange" android:layout_centerVertical="true" />
+                    <TextView android:id="@id/point_text_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="LAS EMISIONES SIMULTANES" android:layout_toRightOf="@id/point_1" android:layout_centerVertical="true" style="@style/tab1.black54" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/point_group_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <ImageView android:id="@id/point_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_checkbox_orange" android:layout_centerVertical="true" />
+                    <TextView android:id="@id/point_text_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="HD VIDEO QUALITY" android:layout_toRightOf="@id/point_2" android:layout_centerVertical="true" style="@style/tab1.black54" />
+                </RelativeLayout>
+                <TextView android:id="@id/upsell_cost" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="@string/upsell_subscription_value_line_1" style="@style/tab1.black54" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/upsell_button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_below="@id/upsell_main_text">
+                    <Button android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/no_thanks" android:singleLine="true" android:layout_weight="3.0" style="@style/button.gray.unpadded" />
+                    <Button android:id="@id/ok_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/start_trial" android:singleLine="true" android:layout_weight="3.0" style="@style/button.orange.unpadded" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout android:clipChildren="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.8">
+                <ImageView android:id="@id/hime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hime_signup_premium" android:scaleType="fitCenter" android:layout_centerInParent="true" android:translationY="@dimen/popup_hime_translation_y" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

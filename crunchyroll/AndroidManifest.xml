@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.crunchyroll.crunchyroid" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448">
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <supports-screens>
+        <android:largeScreens>
+true
+</android:largeScreens>
+        <android:xlargeScreens>
+true
+</android:xlargeScreens>
+    </supports-screens>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <instrumentation android:name="com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner" android:targetPackage="com.secondtv.android.ads"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher_crunchyroll" android:label="@string/crunchyroll" android:name="com.crunchyroll.crunchyroid.app.CrunchyrollApplication" android:theme="@style/Main">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.crunchyroll.crunchyroid.activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="tv.ouya.intent.category.APP"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="crunchyroll"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.crunchyroll.crunchyroid.activities.MainActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:launchMode="singleTask" android:name="com.crunchyroll.crunchyroid.activities.GenreActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.crunchyroll.crunchyroid.activities.PopupActivity" android:theme="@style/Main.popup" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.crunchyroll.crunchyroid.activities.SortFilterMenuActivity" android:theme="@style/Transparent"/>
+        <activity android:launchMode="singleTop" android:name="com.crunchyroll.crunchyroid.activities.SearchActivity" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.crunchyroll.crunchyroid.activities.HelpActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.crunchyroll.crunchyroid.activities.PrivacyPolicyActivity"/>
+        <activity android:name="com.crunchyroll.crunchyroid.activities.SettingsActivity"/>
+        <activity android:name="com.crunchyroll.crunchyroid.activities.SeriesDetailActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.crunchyroll.crunchyroid.activities.ContactUsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.crunchyroll.video.activities.VideoPlayerActivity" android:theme="@style/Main.BlackBackground">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".activities.MainActivity"/>
+            <intent-filter>
+                <action android:name="com.crunchyroll.intent.cast.CAST"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.secondtv.android.ads.AdsActivity" android:screenOrientation="sensorLandscape" android:theme="@style/Main.BlackBackground"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.secondtv.android.ads.AdsActivityTremorWorkaround" android:screenOrientation="sensorLandscape" android:theme="@style/Main.BlackBackground"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.secondtv.android.ads.vast.VastActivity" android:screenOrientation="sensorLandscape" android:theme="@style/Main.BlackBackground"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.secondtv.android.ads.ima.IMAActivity" android:screenOrientation="sensorLandscape" android:theme="@style/Main.BlackBackground"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:hardwareAccelerated="false" android:name="com.tremorvideo.sdk.android.videoad.Playvideo" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="com.tremorvideo.sdk.android.videoad.Playvideo"/>
+                <category android:name="android.intent.category.EMBED"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+        <receiver android:exported="true" android:name="com.crunchyroll.crunchyroid.receivers.ForwardingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+            <meta-data android:name="forward.GoogleAnalytics" android:value="com.google.android.gms.analytics.CampaignTrackingReceiver"/>
+        </receiver>
+        <receiver android:name="com.crunchyroll.cast.LockScreenHelper">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.crunchyroll.cast.NotificationService"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="5545465638cf0ec9635cd2945dff605b12a37437"/>
+        <activity android:hardwareAccelerated="true" android:name="com.swrve.sdk.conversations.ui.ConversationActivity" android:theme="@style/Theme.Conversations"/>
+    </application>
+</manifest>

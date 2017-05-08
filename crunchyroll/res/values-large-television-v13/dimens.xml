@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="episode_thumb_height">56.0dip</dimen>
+    <dimen name="episode_thumb_width">100.0dip</dimen>
+    <dimen name="episodes_loading_icon_height">77.0dip</dimen>
+    <dimen name="fragment_horizontal_margins">50.0dip</dimen>
+    <dimen name="fragment_vertical_margins">30.0dip</dimen>
+    <dimen name="fragment_vertical_paddings">30.0dip</dimen>
+    <dimen name="series_thumb_height">150.0dip</dimen>
+    <dimen name="series_thumb_width">100.0dip</dimen>
+</resources>

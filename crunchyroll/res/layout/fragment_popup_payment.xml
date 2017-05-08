@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/popup_view" android:background="@color/cr_background_app" android:visibility="invisible" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/back" android:background="?android:selectableItemBackground" android:padding="16.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_left_black" />
+                </FrameLayout>
+                <TextView android:textSize="18.0sp" android:textColor="@color/black87" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Step 2/2" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr_payment_hack" android:layout_marginTop="22.0dip" android:layout_marginRight="@dimen/main_fragment_margin_lr" app:fletTextAppearance="@style/caption2.black54" app:fletPaddingLeft="5.0dip" app:fletPaddingBottom="3.0dip">
+                <EditText android:id="@id/card_number_field" android:nextFocusDown="@id/expiration_month_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="CARD NUMBER" android:singleLine="true" android:inputType="number" style="@style/subheader2.black" />
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginTop="18.0dip" android:layout_marginRight="@dimen/main_fragment_margin_lr" android:baselineAligned="false">
+                <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_weight="3.0">
+                    <TextView android:id="@id/month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="@string/payment_month" android:layout_alignParentTop="true" style="@style/caption2.black54" />
+                    <Spinner android:entries="@array/months" android:id="@id/month_spinner" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/month" />
+                    <View android:background="@color/edittext_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="7.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/month_spinner" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_weight="3.0">
+                    <TextView android:id="@id/year" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="@string/payment_year" android:layout_alignParentTop="true" style="@style/caption2.black54" />
+                    <Spinner android:entries="@array/months" android:id="@id/year_spinner" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/year" />
+                    <View android:background="@color/edittext_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="7.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/year_spinner" />
+                </RelativeLayout>
+                <com.wrapp.floatlabelededittext.FloatLabeledEditText android:layout_gravity="bottom" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="4.0" app:fletTextAppearance="@style/caption2.black54" app:fletPaddingBottom="4.0dip">
+                    <EditText android:id="@id/security_code_field" android:nextFocusDown="@id/zip_code_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="CVV" android:singleLine="true" android:maxLength="4" android:inputType="number" style="@style/subheader2.black" />
+                </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginTop="18.0dip" android:layout_marginRight="@dimen/main_fragment_margin_lr">
+                <RelativeLayout android:layout_gravity="bottom" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_weight="6.0">
+                    <TextView android:id="@id/country_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="@string/freetrial_country" android:layout_alignParentTop="true" style="@style/caption2.black54" />
+                    <Spinner android:entries="@array/country_names" android:id="@id/country_spinner" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/country_label" />
+                    <View android:background="@color/edittext_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="7.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/country_spinner" />
+                </RelativeLayout>
+                <com.wrapp.floatlabelededittext.FloatLabeledEditText android:layout_gravity="bottom" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="4.0" app:fletTextAppearance="@style/caption2.black54" app:fletPaddingBottom="4.0dip">
+                    <EditText android:id="@id/zip_code_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="ZIP CODE" android:singleLine="true" android:maxLength="5" android:inputType="number" style="@style/subheader2.black" />
+                </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal" android:id="@id/payment_cost_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginTop="16.0dip" android:layout_marginRight="@dimen/main_fragment_margin_lr" android:text="@string/freetrial_cost" style="@style/caption1.black54" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/start_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginTop="22.0dip" android:layout_marginRight="@dimen/main_fragment_margin_lr" android:text="@string/start_free_trial" android:singleLine="true" style="@style/button.orange.unpadded" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

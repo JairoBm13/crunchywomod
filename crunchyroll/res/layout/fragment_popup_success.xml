@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/home_menu_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/close" android:background="?android:selectableItemBackground" android:padding="16.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_black" />
+        </FrameLayout>
+    </RelativeLayout>
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/success" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginRight="@dimen/main_fragment_margin_lr" android:text="@string/thanks_bang" style="@style/display1.orange" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/success_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginTop="6.0dip" android:layout_marginRight="@dimen/main_fragment_margin_lr" android:text="@string/account_created" style="@style/body2.black" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/hime" android:padding="25.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginRight="@dimen/main_fragment_margin_lr" android:src="@drawable/ic_hime_thankyou" android:layout_weight="1.0" />
+    <Button android:id="@id/ok_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginRight="@dimen/main_fragment_margin_lr" android:text="@string/start_watching" android:singleLine="true" style="@style/button.orange.unpadded" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/learn_more" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/learn_more" android:drawableLeft="@drawable/ic_crown_orange" android:drawablePadding="5.0dip" style="@style/buttonTextOnly.orange" />
+    <View android:layout_width="fill_parent" android:layout_height="24.0dip" />
+</LinearLayout>

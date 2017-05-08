@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:background="@color/bg_series_detail" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.crunchyroll.android.widget.FixedAspectRatioImageView android:id="@id/series_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:layout_alignParentTop="true" app:fixedAspectWidth="@integer/series_image_width" app:fixedAspectHeight="@integer/series_image_height" />
+    <View android:id="@id/overlay" android:background="@color/bg_series_detail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.crunchyroll.android.widget.ScrollRecyclerView android:id="@id/recycler" android:focusable="true" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <android.support.design.widget.CoordinatorLayout android:id="@id/coordinator_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                <android.support.design.widget.FloatingActionButton android:id="@id/button_float" android:focusable="true" android:visibility="gone" android:layout_width="@dimen/floating_action_button_size" android:layout_height="@dimen/floating_action_button_size" android:layout_marginRight="@dimen/floating_action_button_offset_x" android:layout_marginBottom="@dimen/floating_action_button_offset_y" android:src="@drawable/button_floating_queue_selector" android:scaleType="center" android:alpha="0.0" app:layout_anchor="@id/coordinator_layout" app:layout_anchorGravity="end|bottom|center" app:fabSize="normal" app:borderWidth="0.0dip" app:backgroundTint="@color/cr_orange" />
+            </android.support.design.widget.CoordinatorLayout>
+        </RelativeLayout>
+        <include layout="@layout/cast_bar" />
+    </LinearLayout>
+    <com.crunchyroll.android.widget.AnimatedCircleView android:id="@id/circle_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

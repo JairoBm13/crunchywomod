@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="0.0dip" android:top="10.0dip" android:right="0.0dip" android:bottom="10.0dip">
+        <shape android:shape="rectangle">
+            <size android:height="20.0dip" android:width="40.0dip" />
+            <corners android:radius="40.0dip" />
+            <solid android:color="@color/custom_track_on" />
+        </shape>
+    </item>
+</layer-list>

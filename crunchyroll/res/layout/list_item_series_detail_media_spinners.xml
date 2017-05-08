@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_series_detail" android:paddingLeft="@dimen/series_detail_media_spinners_padding_lr" android:paddingRight="@dimen/series_detail_media_spinners_padding_lr" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner android:gravity="left" android:id="@id/spinner_seasons" android:background="@null" android:nextFocusRight="@id/spinner_sort" android:nextFocusDown="@id/spinner_sort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_alignParentLeft="true" />
+    <Spinner android:id="@id/spinner_sort" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/spinner_seasons" android:layout_alignParentRight="true" />
+</RelativeLayout>

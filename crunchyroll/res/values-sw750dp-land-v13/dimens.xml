@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="popup_media_info_margin_lr">96.0dip</dimen>
+    <dimen name="preference_margin_lr">200.0dip</dimen>
+    <dimen name="media_info_lr_margin">122.0dip</dimen>
+    <dimen name="media_info_tb_margin">20.0dip</dimen>
+    <dimen name="popup_width">700.0dip</dimen>
+</resources>

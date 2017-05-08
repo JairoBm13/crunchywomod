@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/home_menu_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginRight="@dimen/main_fragment_margin_lr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0">
+                <com.wrapp.floatlabelededittext.FloatLabeledEditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" app:fletTextAppearance="@style/caption2.black54" app:fletPaddingBottom="4.0dip">
+                    <EditText android:id="@id/login_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="EMAIL" android:singleLine="true" android:inputType="textEmailAddress" style="@style/subheader2.black" />
+                </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+                <com.wrapp.floatlabelededittext.FloatLabeledEditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_marginBottom="22.0dip" app:fletTextAppearance="@style/caption2.black54" app:fletPaddingBottom="4.0dip">
+                    <EditText android:id="@id/password_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:hint="PASSWORD" android:singleLine="true" android:inputType="textPassword" style="@style/subheader2.black" />
+                </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+                <Button android:layout_gravity="center_horizontal" android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="@string/continue_str" android:singleLine="true" style="@style/button.orange.unpadded" />
+                <TextView android:gravity="center" android:id="@id/forgot_password_button" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="16.0dip" android:text="@string/forgot_password" style="@style/buttonTextOnly.orange" />
+            </LinearLayout>
+            <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

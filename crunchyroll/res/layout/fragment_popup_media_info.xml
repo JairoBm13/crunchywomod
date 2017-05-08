@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/popup_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/popup_media_info_margin_lr" android:layout_marginRight="@dimen/popup_media_info_margin_lr">
+        <RelativeLayout android:background="@color/cr_orange" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:ellipsize="end" android:id="@id/series_name" android:paddingLeft="24.0dip" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:layout_toLeftOf="@id/close" android:lineSpacingMultiplier="1.0" style="@style/header1.white.caps" />
+            <TextView android:ellipsize="end" android:id="@id/season_episode" android:paddingLeft="24.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/series_name" style="@style/body2.white" />
+            <FrameLayout android:id="@id/close" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_white" />
+            </FrameLayout>
+        </RelativeLayout>
+        <com.crunchyroll.android.widget.FixedAspectRatioImageView android:id="@id/image" android:background="@color/home_menu_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:fixedAspectWidth="1920" app:fixedAspectHeight="1080" />
+        <RelativeLayout android:background="@color/home_menu_white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:paddingLeft="24.0dip" android:paddingTop="16.0dip" android:paddingRight="24.0dip" android:paddingBottom="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:ellipsize="end" android:id="@id/title_line" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" style="@style/subheader1.black" />
+                    <TextView android:id="@id/description" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_line" android:lineSpacingMultiplier="1.0" style="@style/body2.black" />
+                </RelativeLayout>
+            </ScrollView>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <View android:background="@drawable/gradient_home_menu_white_to_transparent" android:layout_width="fill_parent" android:layout_height="16.0dip" android:layout_alignParentBottom="true" />
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0" />
+                <View android:background="@drawable/gradient_transparent_to_home_menu_white" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_alignParentBottom="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:background="@color/home_menu_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/share_button" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="24.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share" android:singleLine="true" android:layout_toLeftOf="@id/play_button" style="@style/body1.orange.caps" />
+            <TextView android:id="@id/play_button" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/play" android:singleLine="true" android:layout_alignParentRight="true" style="@style/body1.orange.caps" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

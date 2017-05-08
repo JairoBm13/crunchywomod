@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:id="@id/view_switcher" android:tag="@string/loading_tag" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <ProgressBar android:id="@id/loading_view" android:layout_width="@dimen/loading_icon_side_length" android:layout_height="@dimen/loading_icon_side_length" android:indeterminateOnly="true" android:layout_centerInParent="true" style="@style/loadingProgressIndicator" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+        <TextView android:gravity="center" android:id="@id/error_info" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Error" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/retry_layout" android:paddingLeft="20.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/ic_retry_orange" />
+            <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/cr_orange" android:id="@id/retry" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retry" />
+        </LinearLayout>
+    </LinearLayout>
+</ViewSwitcher>

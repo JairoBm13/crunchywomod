@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/action_mediaroute" android:title="@string/cast" app:showAsAction="always" app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider" />
+    <item android:icon="@drawable/ic_share_white" android:id="@id/action_share" android:title="@string/share" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_search_white" android:id="@id/action_search" android:title="@string/search" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_send_white" android:id="@id/action_send" android:title="@string/send" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_more_white" android:id="@id/action_overflow" android:title="@string/switch_view" app:showAsAction="always" />
+</menu>

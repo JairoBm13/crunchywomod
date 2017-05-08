@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/pill_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pill_tabs_margin_lr" android:layout_marginTop="@dimen/main_fragment_margin_top" android:layout_marginRight="@dimen/pill_tabs_margin_lr">
+        <RelativeLayout android:id="@id/button_left" android:background="@drawable/button_pill_left_selector" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="@dimen/pill_button_height" android:layout_weight="1.0">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:id="@id/button_left_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+                <TextView android:id="@id/button_left_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MY QUEUE" android:layout_toRightOf="@id/button_left_image" android:layout_centerVertical="true" style="@style/tab2.orange" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/button_right" android:background="@drawable/button_pill_right_selector" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="@dimen/pill_button_height" android:layout_weight="1.0">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:id="@id/button_right_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+                <TextView android:id="@id/button_right_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MY QUEUE" android:layout_toRightOf="@id/button_right_image" android:layout_centerVertical="true" style="@style/tab2.orange" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/child_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/pill_buttons" />
+</RelativeLayout>

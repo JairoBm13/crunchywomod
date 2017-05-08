@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:layout_width="@dimen/cio__conversation_fragment_width" android:layout_height="@dimen/cio__conversation_fragment_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="@dimen/cio__conversation_fragment_width" android:layout_height="@dimen/cio__conversation_fragment_height" android:layout_marginBottom="?conversationControlTrayTopMargin">
+        <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/cio__content" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?conversationContentStyle" />
+        </ScrollView>
+        <LinearLayout android:orientation="horizontal" android:id="@id/cio__controls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?conversationControlTrayTopMargin" android:layout_weight="0.0" style="?conversationControlTrayStyle" />
+    </LinearLayout>
+    <com.swrve.sdk.conversations.ui.ConversationFullScreenVideoFrame android:id="@id/cio__full_screen" android:background="@android:color/black" android:visibility="gone" android:layout_width="@dimen/cio__conversation_fragment_width" android:layout_height="@dimen/cio__conversation_fragment_height" />
+</RelativeLayout>

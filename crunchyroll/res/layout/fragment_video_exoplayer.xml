@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/video_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.exoplayer.AspectRatioFrameLayout android:id="@id/video_frame" android:background="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:keepScreenOn="true">
+        <com.crunchyroll.exoplayer.ExoPlayerView android:id="@id/video_view" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </com.google.android.exoplayer.AspectRatioFrameLayout>
+    <ImageView android:id="@id/preview_img" android:background="@android:color/black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/preview_time" android:background="@drawable/text_black_rounded_corner" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.crunchyroll.video.fragments.ExoPlayerMediaController android:id="@id/media_controller" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/fragment_horizontal_margins" android:layout_marginRight="@dimen/fragment_vertical_margins" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/cast_bar" android:background="@color/black_semitransparent" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentTop="true">
+        <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/episode_title" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <android.support.v7.app.MediaRouteButton android:id="@id/action_cast" android:layout_width="wrap_content" android:layout_height="wrap_content" app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider" style="@style/Widget.MediaRouter.MediaRouteButton" />
+        <Switch android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/autoplay_toggle" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:track="@drawable/switch_track_selector" android:switchMinWidth="0.0dip" android:switchPadding="5.0dip" />
+    </LinearLayout>
+    <com.crunchyroll.video.widget.VideoInfoView android:gravity="center_vertical" android:id="@id/info_view" android:layout_width="wrap_content" android:layout_height="70.0dip" android:layout_marginTop="@dimen/fragment_vertical_margins" android:layout_marginRight="@dimen/fragment_horizontal_margins" android:layout_below="@id/cast_bar" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/rewind_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_action_rev" />
+        <TextView android:textSize="@dimen/video_info_text_size" android:textColor="@android:color/white" android:id="@id/info_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/forward_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.crunchyroll.video.widget.VideoInfoView>
+    <LinearLayout android:id="@id/message" android:background="@drawable/bg_video_message" android:padding="15.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ProgressBar android:id="@id/progressBar" android:layout_width="@dimen/loading_icon_side_length" android:layout_height="@dimen/loading_icon_side_length" android:layout_marginRight="10.0dip" android:indeterminateOnly="true" style="@style/loadingProgressIndicator" />
+        <TextView android:textSize="@dimen/loading_text_size" android:textColor="@color/cr_background_gray" android:layout_gravity="center" android:id="@id/messageText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/stopping_video" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

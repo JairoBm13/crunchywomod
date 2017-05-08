@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/now_playing_view" android:background="@drawable/dialog_routecontroller" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/cast_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/image" android:background="@drawable/bg_cast_image" android:layout_width="@dimen/episode_thumb_width" android:layout_height="@dimen/episode_thumb_height" android:layout_marginRight="5.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/series_name" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_toLeftOf="@id/play_pause_button" android:layout_toRightOf="@id/image" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/episode_name" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_toLeftOf="@id/play_pause_button" android:layout_toRightOf="@id/image" android:layout_below="@id/series_name" />
+        <ImageButton android:id="@id/play_pause_button" android:background="@android:color/transparent" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/cast_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

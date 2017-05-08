@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/app_name" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Other Apps" style="@style/subheader1.black" />
+    <ImageView android:gravity="center" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_link_gray" />
+</LinearLayout>

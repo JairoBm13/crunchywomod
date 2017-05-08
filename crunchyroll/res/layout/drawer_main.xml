@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="start" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:background="@color/home_menu_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:background="#ffeeeeee" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/crunchyroll_logo" />
+        <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/login_account" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_account_gray" />
+                <TextView android:layout_gravity="center" android:id="@id/login_account_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_menu_login" android:drawableRight="@drawable/ic_user_logout" android:drawablePadding="7.0dip" style="@style/subheader1.black" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/upgrade" android:background="?android:selectableItemBackground" android:paddingTop="10.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_crown_gray" />
+                <TextView android:layout_gravity="center" android:id="@id/upgrade_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_menu_upgrade" style="@style/subheader1.black" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/settings" android:background="?android:selectableItemBackground" android:paddingTop="10.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_settings_gray" />
+                <TextView android:layout_gravity="center" android:id="@id/settings_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_menu_settings" style="@style/subheader1.black" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <ListView android:id="@id/otherApps" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/drawer_bottom_bar_try_premium" android:background="?android:selectableItemBackground" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/hime" android:layout_alignBottom="@id/hime">
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="20.0" />
+            <LinearLayout android:background="@color/cr_orange" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="44.0">
+                <ImageView android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_premium_signup_circle" />
+                <TextView android:layout_gravity="center" android:id="@id/try_premium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="140.0dip" style="@style/menu1.white" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/hime" android:layout_width="105.0dip" android:layout_height="90.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/hime_signup_premium" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/drawer_bottom_bar_already_premium" android:background="?android:selectableItemBackground" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/hime_thanks" android:layout_alignBottom="@id/hime_thanks">
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="20.0" />
+            <LinearLayout android:background="@color/cr_orange" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="44.0">
+                <TextView android:layout_gravity="center" android:id="@id/thank_you" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="115.0dip" android:layout_marginRight="9.0dip" style="@style/menu1.white" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/hime_thanks" android:layout_width="105.0dip" android:layout_height="90.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/hime_running_hearts_premium" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+</RelativeLayout>

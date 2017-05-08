@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.crunchyroll.crunchyroid.widget.CustomSwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/recycler" android:focusable="true" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.crunchyroll.crunchyroid.widget.CustomSwipeRefreshLayout>
+    <android.support.design.widget.CoordinatorLayout android:id="@id/coordinator_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <android.support.design.widget.FloatingActionButton android:id="@id/floating_button" android:layout_width="@dimen/floating_action_button_size" android:layout_height="@dimen/floating_action_button_size" android:layout_marginRight="@dimen/floating_action_button_offset_x" android:layout_marginBottom="@dimen/floating_action_button_offset_y" android:src="@drawable/ic_sort_filter_white" android:scaleType="center" app:layout_anchor="@id/coordinator_layout" app:layout_anchorGravity="end|bottom|center" app:fabSize="normal" app:borderWidth="0.0dip" app:backgroundTint="@color/cr_orange" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

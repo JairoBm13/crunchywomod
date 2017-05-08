@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.CoordinatorLayout android:id="@id/coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.crunchyroll.crunchyroid.widget.CustomSwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/main_fragment_margin_lr" android:layout_marginTop="@dimen/main_fragment_margin_top" android:layout_marginRight="@dimen/main_fragment_margin_lr">
+            <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/recycler" android:focusable="true" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.crunchyroll.crunchyroid.widget.CustomSwipeRefreshLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

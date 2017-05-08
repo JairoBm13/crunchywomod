@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/gradient_transparent_to_gray" android:paddingLeft="@dimen/series_detail_info_padding_left" android:paddingRight="@dimen/series_detail_info_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button android:id="@id/watch" android:background="@drawable/button_black_white" android:paddingLeft="@dimen/button_black_white_padding_lr" android:paddingTop="@dimen/button_black_white_padding_tb" android:paddingRight="@dimen/button_black_white_padding_lr" android:paddingBottom="@dimen/button_black_white_padding_tb" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:minHeight="0.0dip" android:text="CONTINUE WATCHING" android:layout_alignParentTop="true" style="@style/menu1.white" />
+    <TextView android:id="@id/series_title" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="ACE OF THE DIAMOND" android:layout_below="@id/watch" style="@style/header1.white" />
+    <TextView android:id="@id/series_description" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="I want to pitch to that mitt again... A meeting with catcher Kazuya Miyuki changed the 15-year-old Eijun Sawamura's life. He said goodbye to all his friends and knocked upon the door of Seidou" android:layout_below="@id/series_title" style="@style/body2.white" />
+    <com.crunchyroll.android.widget.FlowLayout android:gravity="left" android:id="@id/flow_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:layout_below="@id/series_description" app:spacing="8.0dip" app:direction="leftToRight">
+        <TextView android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/series_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5/5" android:drawableLeft="@drawable/ic_star_small_gray" style="@style/body2.white" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/bookmark" android:background="@drawable/ic_bookmark_large" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.crunchyroll.android.widget.FlowLayout>
+</RelativeLayout>

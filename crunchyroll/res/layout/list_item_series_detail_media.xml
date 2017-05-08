@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/divider" android:background="@color/button_dark_gray" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/series_detail_media_divider_margin_lr" android:layout_marginRight="@dimen/series_detail_media_divider_margin_lr" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/series_detail_media_padding_left" android:paddingTop="@dimen/series_detail_media_item_margin_tb" android:paddingBottom="@dimen/series_detail_media_item_margin_tb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider">
+        <RelativeLayout android:layout_width="140.0dip" android:layout_height="wrap_content">
+            <com.crunchyroll.android.widget.FixedAspectRatioImageView android:id="@id/media_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" app:fixedAspectWidth="640" app:fixedAspectHeight="360" />
+            <LinearLayout android:id="@id/media_progress" android:background="@color/white54" android:layout_width="fill_parent" android:layout_height="6.0dip" android:layout_alignBottom="@id/media_image">
+                <View android:id="@id/media_progress_percent" android:background="@color/cr_orange" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <View android:id="@id/media_progress_remainder" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/media_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Episode 23" android:singleLine="true" android:drawableLeft="@drawable/ic_crown_orange" android:drawablePadding="6.0dip" style="@style/body1.white54" />
+            <TextView android:ellipsize="end" android:id="@id/media_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="A Nostalgic Face" android:singleLine="true" style="@style/body1.white" />
+            <TextView android:ellipsize="end" android:id="@id/media_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="23:31" android:singleLine="true" style="@style/body1.white54" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/info" android:paddingLeft="@dimen/series_detail_media_button_padding_left" android:paddingRight="@dimen/series_detail_media_padding_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="16.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_info_white" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

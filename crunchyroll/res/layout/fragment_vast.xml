@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.secondtv.android.ads.vast.widget.VastVideoView android:id="@id/video_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <Button android:id="@id/clickthrough_button" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/tap_for_more_info" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/padded_clickthrough_button" />
+</RelativeLayout>
